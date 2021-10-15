@@ -13,5 +13,6 @@
 </p>
 
 <a>
-  ![Colasnaudi's github stats](https://github-readme-stats.vercel.app/apiusername=colasnaudi&show_icons=true&hide=contribs,prs&cache_seconds=86400&theme=highcontrast)
+  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=colasnaudi)](https://github.com/anuraghazra/github-readme-stats)
+
  </a>
