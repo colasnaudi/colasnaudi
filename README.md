@@ -13,6 +13,6 @@
 </p>
 
 <a>
-  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=colasnaudi)](https://github.com/anuraghazra/github-readme-stats)
+  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=colasnaudi)](https://github.com/colasnaudi/github-readme-stats)
 
  </a>
