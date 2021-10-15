@@ -11,8 +11,3 @@
 <img src="https://img.shields.io/badge/vscode-blue.svg?style=for-the-badge&logo=visual-studio-code&labelColor=ffffff&logoColor=blue" alt="vscode">
 </a>
 </p>
-
-<a>
-  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=colasnaudi)](https://github.com/colasnaudi/github-readme-stats)
-
- </a>
