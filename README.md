@@ -1,6 +1,6 @@
-<div style="display: inline_block"><br>
-  <img align="center" src="baniere.pdf">
-</div>
+<p align="center">
+    <img src="https://github.com/colasnaudi/colasnaudi/main/baniere.pdf">
+</p>
 
 ## Languages
 <div style="display: inline_block"><br>
