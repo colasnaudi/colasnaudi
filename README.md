@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/colasnaudi/colasnaudi/blob/df7d519caef58213e264b3ec02a44dee774adcf5/baniere.pdf">
+    <img  height="600" width="300" src="https://github.com/colasnaudi/colasnaudi/blob/d90b7c86b13fdf8a9586bc0559fdd429733a06a0/baniere.png">
 </p>
 
 ## Languages
