@@ -1,5 +1,5 @@
 <div style="display: inline_block"><br>
-  <img align="center" src="since 2002.pdf">
+  <img align="center" src="baniere.pdf">
 </div>
 
 ## Languages
