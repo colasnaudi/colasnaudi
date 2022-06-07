@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Colas <img src="https://emoji.gg/assets/emoji/8111-shinycharizard.gif"></h1>
+<h1 align="center">Hi 👋, I'm Colas <img height="40px" width="40px" src="https://emoji.gg/assets/emoji/8111-shinycharizard.gif"></h1>
 <h3 align="center">French Computer Science Student</h3>
 
 - 🌱 I’m currently learning **C++, SQL, Bash, Python, HTML5 and CSS3**
