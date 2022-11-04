@@ -19,7 +19,13 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cs,cpp,php,java,sql,bash,py,js,html,css" />
+    <img src="https://skillicons.dev/icons?i=c,cs,cpp,php,java,mysql,bash,py,js,html,css" />
+  </a>
+</p>
+<hr>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=ps,pr,ai,figma,git,discord,github,instagram,linkedin" />
   </a>
 </p>
 
