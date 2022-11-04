@@ -39,9 +39,10 @@
 <p align= "center">
   <img height= "150" src="https://github-readme-stats.vercel.app/api?username=colasnaudi&theme=react&show_icons=true&include_all_commits=true" />
   <img height= "150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=colasnaudi&theme=react&layout=compact" />
-
-![](https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg)
+</p>
+---
+<p align= "center">
+  [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=colasnaudi&theme=react&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+</p>
 ---
 ![GitHub followers](https://img.shields.io/github/followers/colasnaudi?style=for-the-badge)
----
-</p>
