@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Colas <img width="40" height="40" src="https://emoji.gg/assets/emoji/8111-shinycharizard.gif"></h1>
 <h3 align="center">French Computer Science Student</h3>
 
-- 🌱 I’m currently learning **C/C#/C++, PHP, Java, SQL, Bash, Python, Javascript, HTML5 and CSS3**
+- 🌱 I’m currently learning **C/C++, PHP, Java, SQL, Bash, Python, Javascript, HTML5 and CSS3**
 
 - ⚡ What I like to do: **I like doing sport, travel ...and coding of course**
 
