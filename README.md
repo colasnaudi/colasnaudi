@@ -76,7 +76,7 @@
 </p>
 
 <h2 align="center">Setup:</h2>
-<h3 align="center">Macbook Air 2020 i5</h3>
+<h3 align="center">Macbook Pro M4</h3>
 
 
 <h2 align="center">Stats:</h2>
