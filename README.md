@@ -1,17 +1,17 @@
 <a href="https://colasnaudi.com">
-  <img src="./assets/header.svg" width="100%" alt="Colas Naudi, Full-stack Developer, Web & Mobile" />
+  <img src="./assets/header.svg" width="100%" alt="Colas Naudi, full-stack developer. Web and mobile apps built to last." />
 </a>
 
 <p align="center">
-  <a href="https://colasnaudi.com"><img src="https://img.shields.io/badge/Portfolio-141821?style=for-the-badge&logo=googlechrome&logoColor=8B9CFB" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/colasnaudi/"><img src="https://img.shields.io/badge/LinkedIn-141821?style=for-the-badge&logo=linkedin&logoColor=8B9CFB" alt="LinkedIn" /></a>
-  <a href="https://www.malt.fr/profile/colasnaudi"><img src="https://img.shields.io/badge/Malt-141821?style=for-the-badge&logo=malt&logoColor=8B9CFB" alt="Malt" /></a>
-  <a href="mailto:colasnaudi@gmail.com"><img src="https://img.shields.io/badge/Email-141821?style=for-the-badge&logo=gmail&logoColor=8B9CFB" alt="Email" /></a>
+  <a href="https://www.malt.fr/profile/colasnaudi"><img src="https://img.shields.io/badge/Find_me_on_Malt-16181A?style=for-the-badge&logo=malt&logoColor=white" alt="Find me on Malt" /></a>
+  <a href="https://colasnaudi.com"><img src="https://img.shields.io/badge/Portfolio-FF5A36?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/colasnaudi/"><img src="https://img.shields.io/badge/LinkedIn-16181A?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:colasnaudi@gmail.com"><img src="https://img.shields.io/badge/Email-16181A?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <br />
 
-## <samp>01</samp> &nbsp;About me
+<img src="./assets/title-about.svg" width="100%" alt="About: developer, co-founder, and a bit of a designer." />
 
 <table>
 <tr>
@@ -28,20 +28,20 @@ My main areas of focus are **React, Next.js, TypeScript, React Native** and back
 </td>
 <td width="45%" valign="top">
 
-<samp>EDUCATION</samp><br />
+<sub><b>EDUCATION</b></sub><br />
 **Master MIAGE**, Université Toulouse Capitole
 
-<samp>EXPERIENCE</samp><br />
+<sub><b>EXPERIENCE</b></sub><br />
 **4 years of work-study** at NOBATEK/INEF4 and Cegedim Assurances
 
-<samp>ENTREPRENEURSHIP</samp><br />
+<sub><b>ENTREPRENEURSHIP</b></sub><br />
 **Co-founder of [Besta](#besta)**, a digital product studio
 
-<samp>INDEPENDENT PRODUCT</samp><br />
+<sub><b>INDEPENDENT PRODUCT</b></sub><br />
 **Building [Cueflow](#cueflow)**, a macOS app for DJs
 
-<samp>CURRENTLY</samp><br />
-**Open to full-stack developer opportunities**
+<sub><b>CURRENTLY</b></sub><br />
+🟠 **Open to full-stack developer opportunities**
 
 </td>
 </tr>
@@ -49,14 +49,14 @@ My main areas of focus are **React, Next.js, TypeScript, React Native** and back
 
 <br />
 
-## <samp>02</samp> &nbsp;Selected projects
+<img src="./assets/title-projects.svg" width="100%" alt="Selected work: projects in production." />
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### Cueflow
-<samp>INDEPENDENT PRODUCT · BETA</samp>
+<sub><b>INDEPENDENT PRODUCT · BETA</b></sub>
 
 **A macOS app made by a DJ, for DJs.**
 
@@ -67,16 +67,16 @@ Cueflow started as a tool to improve my own DJ workflow and is now being tested 
 - Implementing licence management and payment flows
 - Preparing the launch of a paid perpetual licence
 
-<img src="https://img.shields.io/badge/macOS-1E2330?style=flat-square&logo=apple&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Swift-1E2330?style=flat-square&logo=swift&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Stripe-1E2330?style=flat-square&logo=stripe&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Product_development-1E2330?style=flat-square" />
+<img src="https://img.shields.io/badge/macOS-F1F3F2?style=flat-square&logo=apple&logoColor=16181A" alt="macOS" />
+<img src="https://img.shields.io/badge/Swift-F1F3F2?style=flat-square&logo=swift&logoColor=16181A" alt="Swift" />
+<img src="https://img.shields.io/badge/Stripe-F1F3F2?style=flat-square&logo=stripe&logoColor=16181A" alt="Stripe" />
+<img src="https://img.shields.io/badge/Product_development-F1F3F2?style=flat-square" alt="Product development" />
 
 </td>
 <td width="50%" valign="top">
 
 ### Besta
-<samp>CO-FOUNDER · 15,000+ DOWNLOADS</samp>
+<sub><b>CO-FOUNDER · 15,000+ DOWNLOADS</b></sub>
 
 **Event discovery and ticketing platform.**
 
@@ -89,15 +89,15 @@ A mobile app for events and outings across the South-West of France, plus profes
 - Event and venue management features
 - Product, technical architecture and delivery
 
-<img src="https://img.shields.io/badge/React_Native-1E2330?style=flat-square&logo=react&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Next.js-1E2330?style=flat-square&logo=nextdotjs&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/TypeScript-1E2330?style=flat-square&logo=typescript&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Supabase-1E2330?style=flat-square&logo=supabase&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/PostgreSQL-1E2330?style=flat-square&logo=postgresql&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Prisma-1E2330?style=flat-square&logo=prisma&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Stripe-1E2330?style=flat-square&logo=stripe&logoColor=8B9CFB" />
+<img src="https://img.shields.io/badge/React_Native-F1F3F2?style=flat-square&logo=react&logoColor=16181A" alt="React Native" />
+<img src="https://img.shields.io/badge/Next.js-F1F3F2?style=flat-square&logo=nextdotjs&logoColor=16181A" alt="Next.js" />
+<img src="https://img.shields.io/badge/TypeScript-F1F3F2?style=flat-square&logo=typescript&logoColor=16181A" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Supabase-F1F3F2?style=flat-square&logo=supabase&logoColor=16181A" alt="Supabase" />
+<img src="https://img.shields.io/badge/PostgreSQL-F1F3F2?style=flat-square&logo=postgresql&logoColor=16181A" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/Prisma-F1F3F2?style=flat-square&logo=prisma&logoColor=16181A" alt="Prisma" />
+<img src="https://img.shields.io/badge/Stripe-F1F3F2?style=flat-square&logo=stripe&logoColor=16181A" alt="Stripe" />
 
-<a href="https://besta-app.fr"><img src="https://img.shields.io/badge/Visit_Besta_→-8B9CFB?style=for-the-badge&labelColor=141821" alt="Visit Besta" /></a>
+<a href="https://besta-app.fr"><img src="https://img.shields.io/badge/Visit_Besta_→-FF5A36?style=for-the-badge" alt="Visit Besta" /></a>
 
 </td>
 </tr>
@@ -105,7 +105,7 @@ A mobile app for events and outings across the South-West of France, plus profes
 <td width="50%" valign="top">
 
 ### Job Hunter
-<samp>PERSONAL PROJECT · LIVE</samp>
+<sub><b>PERSONAL PROJECT · LIVE</b></sub>
 
 **An AI-powered job-search assistant.**
 
@@ -116,18 +116,18 @@ Designed to centralise job opportunities and make the application process easier
 - Uses AI to assist with application writing
 - Connects with an inbox to keep application statuses up to date
 
-<img src="https://img.shields.io/badge/Next.js-1E2330?style=flat-square&logo=nextdotjs&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/TypeScript-1E2330?style=flat-square&logo=typescript&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/AI-1E2330?style=flat-square&logo=openai&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Google_Apps_Script-1E2330?style=flat-square&logo=google&logoColor=8B9CFB" />
+<img src="https://img.shields.io/badge/Next.js-F1F3F2?style=flat-square&logo=nextdotjs&logoColor=16181A" alt="Next.js" />
+<img src="https://img.shields.io/badge/TypeScript-F1F3F2?style=flat-square&logo=typescript&logoColor=16181A" alt="TypeScript" />
+<img src="https://img.shields.io/badge/AI-F1F3F2?style=flat-square" alt="AI" />
+<img src="https://img.shields.io/badge/Google_Apps_Script-F1F3F2?style=flat-square&logo=google&logoColor=16181A" alt="Google Apps Script" />
 
-<a href="https://jobhunter.colasnaudi.com"><img src="https://img.shields.io/badge/Visit_Job_Hunter_→-8B9CFB?style=for-the-badge&labelColor=141821" alt="Visit Job Hunter" /></a>
+<a href="https://jobhunter.colasnaudi.com"><img src="https://img.shields.io/badge/Visit_Job_Hunter_→-FF5A36?style=for-the-badge" alt="Visit Job Hunter" /></a>
 
 </td>
 <td width="50%" valign="top">
 
 ### ORBIT
-<samp>CEGEDIM ASSURANCES · AI TOOLING</samp>
+<sub><b>CEGEDIM ASSURANCES · AI TOOLING</b></sub>
 
 **AI-assisted development tool.**
 
@@ -138,11 +138,11 @@ Analyses Jira tickets by gathering context from multiple sources and document fo
 - Screenshot processing with Claude Vision
 - Gathering and structuring context for ticket analysis
 
-<img src="https://img.shields.io/badge/MCP-1E2330?style=flat-square&logo=anthropic&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Jira-1E2330?style=flat-square&logo=jira&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/GitLab-1E2330?style=flat-square&logo=gitlab&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Claude_Vision-1E2330?style=flat-square&logo=claude&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/JavaScript-1E2330?style=flat-square&logo=javascript&logoColor=8B9CFB" />
+<img src="https://img.shields.io/badge/MCP-F1F3F2?style=flat-square&logo=anthropic&logoColor=16181A" alt="MCP" />
+<img src="https://img.shields.io/badge/Jira-F1F3F2?style=flat-square&logo=jira&logoColor=16181A" alt="Jira" />
+<img src="https://img.shields.io/badge/GitLab-F1F3F2?style=flat-square&logo=gitlab&logoColor=16181A" alt="GitLab" />
+<img src="https://img.shields.io/badge/Claude_Vision-F1F3F2?style=flat-square&logo=claude&logoColor=16181A" alt="Claude Vision" />
+<img src="https://img.shields.io/badge/JavaScript-F1F3F2?style=flat-square&logo=javascript&logoColor=16181A" alt="JavaScript" />
 
 </td>
 </tr>
@@ -150,24 +150,26 @@ Analyses Jira tickets by gathering context from multiple sources and document fo
 <td width="50%" valign="top">
 
 ### LNA Natation
-<samp>CLIENT PROJECT · WITH BESTA</samp>
+<sub><b>CLIENT PROJECT · WITH BESTA</b></sub>
 
-**iOS / Android app and web back-office** for the Ligue Nouvelle-Aquitaine de Natation.
+**iOS / Android app and web back-office.**
+
+A digital platform for the Ligue Nouvelle-Aquitaine de Natation.
 
 - Cross-platform mobile application
 - Web back-office for managing and publishing content
 - WordPress integration through the REST API
 
-<img src="https://img.shields.io/badge/React_Native-1E2330?style=flat-square&logo=react&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Next.js-1E2330?style=flat-square&logo=nextdotjs&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/WordPress_REST_API-1E2330?style=flat-square&logo=wordpress&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Firebase-1E2330?style=flat-square&logo=firebase&logoColor=8B9CFB" />
+<img src="https://img.shields.io/badge/React_Native-F1F3F2?style=flat-square&logo=react&logoColor=16181A" alt="React Native" />
+<img src="https://img.shields.io/badge/Next.js-F1F3F2?style=flat-square&logo=nextdotjs&logoColor=16181A" alt="Next.js" />
+<img src="https://img.shields.io/badge/WordPress_REST_API-F1F3F2?style=flat-square&logo=wordpress&logoColor=16181A" alt="WordPress REST API" />
+<img src="https://img.shields.io/badge/Firebase-F1F3F2?style=flat-square&logo=firebase&logoColor=16181A" alt="Firebase" />
 
 </td>
 <td width="50%" valign="top">
 
 ### NOBATEK/INEF4
-<samp>R&D · SUSTAINABLE CONSTRUCTION</samp>
+<sub><b>R&D · SUSTAINABLE CONSTRUCTION</b></sub>
 
 **Software development in a research and innovation environment.**
 
@@ -175,14 +177,14 @@ Analyses Jira tickets by gathering context from multiple sources and document fo
 - A Unity-based flood simulation of Dordrecht for a European project
 - An iPad AR app displaying a building's digital model on a live construction site
 
-<img src="https://img.shields.io/badge/Python-1E2330?style=flat-square&logo=python&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/JavaScript-1E2330?style=flat-square&logo=javascript&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/C%23-1E2330?style=flat-square&logo=dotnet&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/Unity-1E2330?style=flat-square&logo=unity&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/PostgreSQL-1E2330?style=flat-square&logo=postgresql&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/SQLite-1E2330?style=flat-square&logo=sqlite&logoColor=8B9CFB" />
-<img src="https://img.shields.io/badge/SPARQL-1E2330?style=flat-square" />
-<img src="https://img.shields.io/badge/AR-1E2330?style=flat-square" />
+<img src="https://img.shields.io/badge/Python-F1F3F2?style=flat-square&logo=python&logoColor=16181A" alt="Python" />
+<img src="https://img.shields.io/badge/JavaScript-F1F3F2?style=flat-square&logo=javascript&logoColor=16181A" alt="JavaScript" />
+<img src="https://img.shields.io/badge/C%23-F1F3F2?style=flat-square&logo=dotnet&logoColor=16181A" alt="C#" />
+<img src="https://img.shields.io/badge/Unity-F1F3F2?style=flat-square&logo=unity&logoColor=16181A" alt="Unity" />
+<img src="https://img.shields.io/badge/PostgreSQL-F1F3F2?style=flat-square&logo=postgresql&logoColor=16181A" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/SQLite-F1F3F2?style=flat-square&logo=sqlite&logoColor=16181A" alt="SQLite" />
+<img src="https://img.shields.io/badge/SPARQL-F1F3F2?style=flat-square" alt="SPARQL" />
+<img src="https://img.shields.io/badge/AR-F1F3F2?style=flat-square" alt="AR" />
 
 </td>
 </tr>
@@ -190,47 +192,39 @@ Analyses Jira tickets by gathering context from multiple sources and document fo
 
 <br />
 
-## <samp>03</samp> &nbsp;Tech stack
+<img src="./assets/title-stack.svg" width="100%" alt="Tech stack: my everyday tools." />
 
 <table>
 <tr>
 <td align="center" width="33%">
-<samp>FRONTEND & MOBILE</samp><br /><br />
-<img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,html,css,swift&theme=dark&perline=4" alt="Frontend and mobile technologies" />
+<sub><b>FRONTEND & MOBILE</b></sub><br /><br />
+<img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,html,css,swift&theme=light&perline=4" alt="Frontend and mobile technologies" />
 </td>
 <td align="center" width="33%">
-<samp>BACKEND & DATA</samp><br /><br />
-<img src="https://skillicons.dev/icons?i=nodejs,java,spring,postgres,supabase,prisma,firebase,py&theme=dark&perline=4" alt="Backend and data technologies" />
+<sub><b>BACKEND & DATA</b></sub><br /><br />
+<img src="https://skillicons.dev/icons?i=nodejs,java,spring,postgres,supabase,prisma,firebase,py&theme=light&perline=4" alt="Backend and data technologies" />
 </td>
 <td align="center" width="33%">
-<samp>TOOLS & INFRA</samp><br /><br />
-<img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,vercel,figma,postman,wordpress&theme=dark&perline=4" alt="Tools and infrastructure" />
+<sub><b>TOOLS & INFRA</b></sub><br /><br />
+<img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,vercel,figma,postman,wordpress&theme=light&perline=4" alt="Tools and infrastructure" />
 </td>
 </tr>
 </table>
 
 <br />
 
-## <samp>04</samp> &nbsp;GitHub activity
+<img src="./assets/title-activity.svg" width="100%" alt="GitHub activity: what I've been shipping." />
 
-<!-- Images generated by .github/workflows/profile.yml -->
-<p align="center">
-  <img src="./profile-summary-card-output/tokyonight/0-profile-details.svg" width="100%" alt="Contributions" />
-</p>
-<p align="center">
-  <img src="./profile-summary-card-output/tokyonight/3-stats.svg" width="49%" alt="GitHub stats" />
-  <img src="./profile-summary-card-output/tokyonight/2-most-commit-language.svg" width="49%" alt="Most committed languages" />
-</p>
+<!-- Generated every day by .github/workflows/update-profile.yml -->
+<img src="./assets/stats.svg" width="100%" alt="GitHub stats for colasnaudi" />
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/colasnaudi/colasnaudi/output/snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/colasnaudi/colasnaudi/output/snake.svg" width="100%" alt="Contribution snake" />
-  </picture>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/colasnaudi/colasnaudi/output/snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/colasnaudi/colasnaudi/output/snake.svg" width="100%" alt="Contribution snake" />
+</picture>
 
-<br />
+<br /><br />
 
 <a href="mailto:colasnaudi@gmail.com">
-  <img src="./assets/footer.svg" width="100%" alt="Interested in building something together? Get in touch." />
+  <img src="./assets/footer.svg" width="100%" alt="What are we building together? colasnaudi@gmail.com" />
 </a>
