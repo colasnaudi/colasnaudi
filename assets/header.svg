@@ -16,11 +16,11 @@
   .loop{stroke-dasharray:7 9;animation:dash 3s linear infinite}
   </style>
 
-<defs><clipPath id="card"><rect x="820" y="36" width="344" height="388" rx="28"/></clipPath></defs>
+<defs><clipPath id="card"><rect x="820" y="36" width="344" height="388" rx="28"/></clipPath><clipPath id="frame"><rect x="1" y="1" width="1198" height="458" rx="31.5"/></clipPath></defs>
 <rect x=".5" y=".5" width="1199" height="459" rx="32" fill="#FFFFFF" stroke="#E3E6E8"/>
 
 <!-- mint dashed loop, like the site -->
-<path class="loop" d="M-10 440 C 110 420, 210 400, 300 420 S 280 470, 230 456 S 330 400, 480 418 S 700 462, 800 436" stroke="#9FD8CF" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+<path class="loop" clip-path="url(#frame)" d="M-10 440 C 110 420, 210 400, 300 420 S 280 470, 230 456 S 330 400, 480 418 S 700 462, 800 440 S 1060 428, 1220 446" stroke="#9FD8CF" stroke-width="2" stroke-linecap="round" opacity=".8"/>
 
 <!-- logo + wordmark -->
 <g class="in1">

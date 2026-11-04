@@ -25,6 +25,6 @@
 <g>
   <rect x="56" y="160" width="256" height="48" rx="14" fill="#FF5A36"/>
   <text x="80" y="190" class="b" font-weight="600" font-size="16" fill="#16181A">colasnaudi@gmail.com</text>
-  <g class="arrow"><text x="280" y="190" class="b" font-weight="600" font-size="16" fill="#16181A">→</text></g>
+  <g class="arrow"><path d="M278 184h12m-5 -5l5 5l-5 5" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
 </g>
 </svg>

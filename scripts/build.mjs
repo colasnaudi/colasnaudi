@@ -1,7 +1,7 @@
 // Generates the SVG visuals of the GitHub profile README, in the colasnaudi.com theme.
 //   node scripts/build.mjs           -> static visuals (header, section titles, footer)
 //   node scripts/build.mjs --stats   -> GitHub stats card (needs GH_TOKEN)
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -72,11 +72,11 @@ function header() {
   .loop{stroke-dasharray:7 9;animation:dash 3s linear infinite}
   `;
   const body = `
-<defs><clipPath id="card"><rect x="820" y="36" width="344" height="388" rx="28"/></clipPath></defs>
+<defs><clipPath id="card"><rect x="820" y="36" width="344" height="388" rx="28"/></clipPath><clipPath id="frame"><rect x="1" y="1" width="1198" height="458" rx="31.5"/></clipPath></defs>
 <rect x=".5" y=".5" width="1199" height="459" rx="32" fill="${C.white}" stroke="${C.line}"/>
 
 <!-- mint dashed loop, like the site -->
-<path class="loop" d="M-10 440 C 110 420, 210 400, 300 420 S 280 470, 230 456 S 330 400, 480 418 S 700 462, 800 436" stroke="${C.mint}" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+<path class="loop" clip-path="url(#frame)" d="M-10 440 C 110 420, 210 400, 300 420 S 280 470, 230 456 S 330 400, 480 418 S 700 462, 800 440 S 1060 428, 1220 446" stroke="${C.mint}" stroke-width="2" stroke-linecap="round" opacity=".8"/>
 
 <!-- logo + wordmark -->
 <g class="in1">
@@ -166,9 +166,337 @@ function footer() {
 <g>
   <rect x="56" y="160" width="256" height="48" rx="14" fill="${C.coral}"/>
   <text x="80" y="190" class="b" font-weight="600" font-size="16" fill="${C.ink}">colasnaudi@gmail.com</text>
-  <g class="arrow"><text x="280" y="190" class="b" font-weight="600" font-size="16" fill="${C.ink}">→</text></g>
+  <g class="arrow">${arrowRight(278, 184, C.ink)}</g>
 </g>`;
   return svg(1200, 260, css, body);
+}
+
+// ---------- text measuring (advance widths extracted from the embedded fonts) ----------
+const METRICS = JSON.parse(readFileSync(join(OUT, "fonts", "metrics.json"), "utf8"));
+const fontKey = (weight) => (weight === "display" ? "display" : `b${weight}`);
+function measure(text, weight, size, ls = 0) {
+  const m = METRICS[fontKey(weight)];
+  let w = 0;
+  for (const ch of text) w += (m.w[ch] ?? 560) / m.upm * size + ls;
+  return w;
+}
+// Rich text: "**bold**" segments switch to the strong style. Returns lines of [text, strong] runs.
+function wrap(text, { weight, size, width, strongWeight = weight }) {
+  const words = [];
+  text.split(/(\*\*[^*]+\*\*)/).filter(Boolean).forEach((part) => {
+    const strong = part.startsWith("**");
+    const raw = strong ? part.slice(2, -2) : part;
+    raw.split(/(\s+)/).forEach((w) => {
+      if (!w) return;
+      if (/^\s+$/.test(w)) words.push({ space: true, strong });
+      else words.push({ t: w, strong });
+    });
+  });
+  const lines = [[]];
+  let x = 0;
+  const wOf = (t, strong) => measure(t, strong ? strongWeight : weight, size);
+  for (const w of words) {
+    const line = lines[lines.length - 1];
+    if (w.space) { if (line.length) { line.push({ t: " ", strong: w.strong }); x += wOf(" ", w.strong); } continue; }
+    const ww = wOf(w.t, w.strong);
+    if (x + ww > width && line.length) {
+      while (line.length && line[line.length - 1].t === " ") line.pop();
+      lines.push([{ t: w.t, strong: w.strong }]);
+      x = ww;
+    } else { line.push({ t: w.t, strong: w.strong }); x += ww; }
+  }
+  // merge runs of the same style
+  return lines.map((l) => l.reduce((acc, r) => {
+    const last = acc[acc.length - 1];
+    if (last && last.strong === r.strong) last.t += r.t; else acc.push({ ...r });
+    return acc;
+  }, []));
+}
+function textBlock(lines, { x, y, lh, weight, size, fill, strongWeight = weight, strongFill = fill, cls = "b" }) {
+  return lines.map((runs, i) =>
+    `<text x="${x}" y="${(y + i * lh).toFixed(1)}" class="${cls}" font-weight="${weight}" font-size="${size}" fill="${fill}">` +
+    runs.map((r) => r.strong
+      ? `<tspan font-weight="${strongWeight}" fill="${strongFill}">${esc(r.t)}</tspan>`
+      : esc(r.t)).join("") + `</text>`).join("\n");
+}
+// arrows are drawn: the font subsets have no arrow glyph
+const arrowRight = (x, y, color, s = 1) =>
+  `<path d="M${x} ${y}h${12 * s}m${-5 * s} ${-5 * s}l${5 * s} ${5 * s}l${-5 * s} ${5 * s}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+const arrowUpRight = (x, y, color) =>
+  `<path d="M${x} ${y + 10}L${x + 10} ${y}M${x + 2.5} ${y}H${x + 10}V${y + 7.5}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+
+// ---------- buttons ----------
+// variant "coral": always coral. variant "ink": ink in light mode, light in dark mode.
+function button(label, { variant = "ink", icon = "external" } = {}) {
+  const H = 48, padX = 22, size = 16, gap = 10, iconW = icon === "external" ? 10 : 12;
+  const tw = measure(label, 600, size);
+  const W = Math.ceil(padX + tw + gap + iconW + padX);
+  const coral = variant === "coral";
+  const css = FONTS.body600() + BASE_CSS + `
+  .bg{fill:${coral ? C.coral : C.ink}} .fg{fill:${coral ? C.ink : C.white}} .st{stroke:${coral ? C.ink : C.white}}
+  ${coral ? "" : `@media (prefers-color-scheme: dark){ .bg{fill:#F0F3F6} .fg{fill:${C.ink}} .st{stroke:${C.ink}} }`}
+  .ic{animation:nudge 1.8s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:none}50%{transform:translate(${icon === "external" ? "2px,-2px" : "3px,0"})}}
+  `;
+  const ix = padX + tw + gap;
+  const iconSvg = icon === "external"
+    ? arrowUpRight(ix, H / 2 - 5, "").replace('stroke=""', 'class="st"')
+    : arrowRight(ix, H / 2, "").replace('stroke=""', 'class="st"');
+  return svg(W, H, css, `
+<rect width="${W}" height="${H}" rx="16" class="bg"/>
+<text x="${padX}" y="${H / 2 + 5.5}" class="b fg" font-weight="600" font-size="${size}">${esc(label)}</text>
+<g class="ic">${iconSvg}</g>`);
+}
+
+// ---------- about ----------
+const ABOUT = {
+  paragraphs: [
+    "I'm a full-stack developer based in **Paris**, originally from the French Basque Country.",
+    "I enjoy building digital products **end to end**, from architecture and backend development to user interfaces, mobile applications and deployment.",
+    "I'm particularly interested in **product engineering**: understanding a problem, designing a solution and taking it all the way to production.",
+    "My main areas of focus are **React, Next.js, TypeScript, React Native** and backend development.",
+  ],
+  facts: [
+    ["EDUCATION", "Master MIAGE", "Université Toulouse Capitole"],
+    ["EXPERIENCE", "4 years of work-study", "NOBATEK/INEF4 and Cegedim Assurances"],
+    ["ENTREPRENEURSHIP", "Co-founder of Besta", "A digital product studio"],
+    ["INDEPENDENT PRODUCT", "Building Cueflow", "A macOS app for DJs"],
+  ],
+  now: "Open to full-stack developer opportunities",
+};
+function about() {
+  const W = 1200, P = 56, lw = 600, rx = 712, rw = W - P - rx;
+  const css = FONTS.display() + FONTS.body400() + FONTS.body600() + BASE_CSS + `
+  .dot{transform-origin:${rx + 40}px 0;transform-box:fill-box;animation:ping 1.8s ease-out infinite}
+  @keyframes ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(3.2);opacity:0}}
+  `;
+  // left column
+  let y = P + 40;
+  const left = [];
+  ABOUT.paragraphs.forEach((p, i) => {
+    const lines = wrap(p, { weight: 400, strongWeight: 600, size: 20, width: lw });
+    left.push(`<g class="in${Math.min(i + 1, 4)}">` + textBlock(lines, { x: P, y, lh: 31, weight: 400, size: 20, fill: C.text2, strongWeight: 600, strongFill: C.ink }) + `</g>`);
+    y += lines.length * 31 + 20;
+  });
+  const leftH = y - 20 - 31 + 10;
+  // right column (facts panel)
+  let ry = P + 36;
+  const right = [];
+  ABOUT.facts.forEach(([k, v, sub], i) => {
+    right.push(`<g class="in${Math.min(i + 1, 4)}">
+  <text x="${rx + 32}" y="${ry}" class="eyebrow" fill="${C.text3}">${esc(k)}</text>
+  <text x="${rx + 32}" y="${ry + 27}" class="d" font-size="21" letter-spacing="-.5" fill="${C.ink}">${esc(v)}</text>
+  <text x="${rx + 32}" y="${ry + 50}" class="b" font-weight="400" font-size="15" fill="${C.text2}">${esc(sub)}</text>
+</g>`);
+    ry += 84;
+    if (i < ABOUT.facts.length - 1) right.push(`<line x1="${rx + 32}" y1="${ry - 26}" x2="${rx + rw - 32}" y2="${ry - 26}" stroke="${C.line}"/>`);
+  });
+  ry -= 8;
+  const nowY = ry;
+  right.push(`<g class="in4">
+  <rect x="${rx + 20}" y="${nowY}" width="${rw - 40}" height="48" rx="16" fill="${C.coral}"/>
+  <circle class="dot" cx="${rx + 42}" cy="${nowY + 24}" r="5" fill="${C.ink}"/>
+  <circle cx="${rx + 42}" cy="${nowY + 24}" r="5" fill="${C.ink}"/>
+  <text x="${rx + 58}" y="${nowY + 29.5}" class="b" font-weight="600" font-size="15" fill="${C.ink}">${esc(ABOUT.now)}</text>
+</g>`);
+  const panelH = nowY + 48 + 20 - P;
+  const H = Math.max(leftH, panelH) + 2 * P - 36;
+  const panelY = P - 16;
+  return svg(W, H, css, `
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="32" fill="${C.white}" stroke="${C.line}"/>
+<rect x="${rx}" y="${panelY}" width="${rw}" height="${H - 2 * panelY}" rx="24" fill="${C.soft}"/>
+${left.join("\n")}
+${right.join("\n")}`);
+}
+
+// ---------- projects ----------
+const PROJECTS = [
+  {
+    file: "cueflow", name: "Cueflow", eyebrow: "INDEPENDENT PRODUCT · BETA", accent: C.mint,
+    tagline: "A macOS app made by a DJ, for DJs.",
+    desc: "Started as a tool to improve my own DJ workflow, now tested in beta by around ten DJs, from beginners to experienced users.",
+    bullets: [
+      "Native macOS application built with Swift",
+      "Product designed around real DJ workflows",
+      "Licence management and payment flows",
+      "Preparing the launch of a paid perpetual licence",
+    ],
+    tags: ["macOS", "Swift", "Stripe", "Product development"],
+  },
+  {
+    file: "besta", name: "Besta", eyebrow: "CO-FOUNDER · 15,000+ DOWNLOADS", accent: C.coral,
+    tagline: "Event discovery and ticketing platform.",
+    desc: "A mobile app for events and outings across the South-West of France, plus pro and admin tools for organisers and venues.",
+    bullets: [
+      "Cross-platform mobile app, built and maintained",
+      "Professional back-office and admin area",
+      "Subscriptions, ticketing and checkout with Stripe",
+      "Product, technical architecture and delivery",
+    ],
+    tags: ["React Native", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Prisma", "Stripe"],
+    link: { label: "Visit besta-app.fr", href: "https://besta-app.fr" },
+  },
+  {
+    file: "jobhunter", name: "Job Hunter", eyebrow: "PERSONAL PROJECT · LIVE", accent: C.peach2,
+    tagline: "An AI-powered job-search assistant.",
+    desc: "Designed to centralise job opportunities and make the application process easier to manage.",
+    bullets: [
+      "Aggregates job offers from multiple sources",
+      "Ranks opportunities and prepares applications",
+      "AI assistance for application writing",
+      "Inbox sync to keep application statuses up to date",
+    ],
+    tags: ["Next.js", "TypeScript", "AI", "Google Apps Script"],
+    link: { label: "Visit Job Hunter", href: "https://jobhunter.colasnaudi.com" },
+  },
+  {
+    file: "orbit", name: "ORBIT", eyebrow: "CEGEDIM ASSURANCES · AI TOOLING", accent: C.ink,
+    tagline: "AI-assisted development tool.",
+    desc: "Analyses Jira tickets by gathering context from multiple sources and document formats. My contributions:",
+    bullets: [
+      "Jira integration through a custom MCP server",
+      "Information extraction from text and office documents",
+      "Screenshot processing with Claude Vision",
+      "Structuring context for ticket analysis",
+    ],
+    tags: ["MCP", "Jira", "GitLab", "Claude Vision", "JavaScript"],
+  },
+  {
+    file: "lna", name: "LNA Natation", eyebrow: "CLIENT PROJECT · WITH BESTA", accent: C.mintLight,
+    tagline: "iOS / Android app and web back-office.",
+    desc: "A digital platform for the Ligue Nouvelle-Aquitaine de Natation.",
+    bullets: [
+      "Cross-platform mobile application",
+      "Web back-office to manage and publish content",
+      "WordPress integration through the REST API",
+    ],
+    tags: ["React Native", "Next.js", "WordPress REST API", "Firebase"],
+  },
+  {
+    file: "nobatek", name: "NOBATEK/INEF4", eyebrow: "R&D · SUSTAINABLE CONSTRUCTION", accent: C.peach,
+    tagline: "Software in a research and innovation environment.",
+    desc: "Four years of work-study building tools for sustainable construction research.",
+    bullets: [
+      "Web applications for energy monitoring",
+      "Unity flood simulation of Dordrecht for a European project",
+      "iPad AR app showing a building's digital model on site",
+    ],
+    tags: ["Python", "JavaScript", "C#", "Unity", "PostgreSQL", "SQLite", "SPARQL", "AR"],
+  },
+];
+
+const CARD = { W: 600, M: 8, P: 36 }; // M: transparent margin, so images placed side by side get a gutter
+function layoutProject(p) {
+  const { W, P } = CARD, cw = W - 2 * P, out = [];
+  let y = P;
+  // eyebrow pill
+  const ew = measure(p.eyebrow, 600, 13, 0.78);
+  out.push(`<g class="in1">
+  <rect x="${P}" y="${y}" width="${(ew + 46).toFixed(1)}" height="30" rx="15" fill="${C.soft}"/>
+  <rect x="${P + 13}" y="${y + 10}" width="10" height="10" rx="3" fill="${p.accent === C.mintLight ? C.mint : p.accent}"/>
+  <text x="${P + 32}" y="${y + 19.5}" class="eyebrow" fill="${C.ink2}">${esc(p.eyebrow)}</text>
+</g>`);
+  y += 30 + 56;
+  out.push(`<text x="${P - 2}" y="${y}" class="d in2" font-size="44" letter-spacing="-1.6" fill="${C.ink}">${esc(p.name)}</text>`);
+  y += 36;
+  const tl = wrap(p.tagline, { weight: 600, size: 19, width: cw });
+  out.push(`<g class="in2">${textBlock(tl, { x: P, y, lh: 26, weight: 600, size: 19, fill: C.ink })}</g>`);
+  y += (tl.length - 1) * 26 + 28;
+  const dl = wrap(p.desc, { weight: 400, size: 16, width: cw });
+  out.push(`<g class="in3">${textBlock(dl, { x: P, y, lh: 24, weight: 400, size: 16, fill: C.text2 })}</g>`);
+  y += (dl.length - 1) * 24 + 22;
+  out.push(`<line x1="${P}" y1="${y}" x2="${W - P}" y2="${y}" stroke="${C.line}" class="in3"/>`);
+  y += 32;
+  const bl = [];
+  for (const b of p.bullets) {
+    const lines = wrap(b, { weight: 500, size: 15.5, width: cw - 22 });
+    bl.push(`<rect x="${P}" y="${y - 9}" width="8" height="8" rx="2.5" fill="${C.coral}"/>`);
+    bl.push(textBlock(lines, { x: P + 22, y, lh: 22, weight: 500, size: 15.5, fill: C.ink2 }));
+    y += lines.length * 22 + 10;
+  }
+  out.push(`<g class="in3">${bl.join("\n")}</g>`);
+  y += 14;
+  // tag pills
+  let tx = P;
+  const tags = [];
+  for (const t of p.tags) {
+    const w = measure(t, 500, 13.5) + 26;
+    if (tx + w > W - P) { tx = P; y += 38; }
+    tags.push(`<rect x="${tx.toFixed(1)}" y="${y}" width="${w.toFixed(1)}" height="30" rx="10" fill="${C.soft}"/>
+<text x="${(tx + 13).toFixed(1)}" y="${y + 19.7}" class="b" font-weight="500" font-size="13.5" fill="${C.ink}">${esc(t)}</text>`);
+    tx += w + 8;
+  }
+  out.push(`<g class="in4">${tags.join("\n")}</g>`);
+  y += 30;
+  return { body: out.join("\n"), contentH: y + P };
+}
+function projectCard(p, H) {
+  const { W, M, P } = CARD;
+  const { body } = layoutProject(p);
+  let link = "";
+  if (p.link) {
+    const tw = measure(p.link.label, 600, 15);
+    const bw = 22 + tw + 10 + 10 + 22, by = H - P - 46;
+    link = `<g class="in4">
+  <rect x="${P}" y="${by}" width="${bw.toFixed(1)}" height="46" rx="15" fill="${C.coral}"/>
+  <text x="${P + 22}" y="${by + 28.5}" class="b" font-weight="600" font-size="15" fill="${C.ink}">${esc(p.link.label)}</text>
+  <g class="ic">${arrowUpRight(P + 22 + tw + 10, by + 18, C.ink)}</g>
+</g>`;
+  }
+  const ringFill = p.accent;
+  const css = FONTS.display() + FONTS.body400() + FONTS.body500() + FONTS.body600() + BASE_CSS + `
+  .ring{transform-origin:${W - 30}px 10px;animation:breathe 6s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+  .ic{animation:nudge 1.8s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:none}50%{transform:translate(2px,-2px)}}
+  `;
+  return svg(W + 2 * M, H + 2 * M, css, `
+<g transform="translate(${M} ${M})">
+<defs><clipPath id="c"><rect width="${W}" height="${H}" rx="28"/></clipPath></defs>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="28" fill="${C.white}" stroke="${C.line}"/>
+<g clip-path="url(#c)"><g class="ring">
+  <circle cx="${W - 30}" cy="10" r="96" stroke="${ringFill}" stroke-opacity=".9" stroke-width="18"/>
+  <circle cx="${W - 30}" cy="10" r="56" fill="${ringFill}" fill-opacity=".9"/>
+</g></g>
+${body}
+${link}
+</g>`);
+}
+function projects() {
+  const out = [];
+  for (let i = 0; i < PROJECTS.length; i += 2) {
+    const row = PROJECTS.slice(i, i + 2);
+    const H = Math.max(...row.map((p) => layoutProject(p).contentH + (p.link ? 46 + 28 : 0)));
+    for (const p of row) out.push([`project-${p.file}.svg`, projectCard(p, H)]);
+  }
+  return out;
+}
+
+// ---------- tech stack ----------
+const STACK = [
+  ["FRONTEND & MOBILE", "react,nextjs,ts,js,tailwind,html,css,swift"],
+  ["BACKEND & DATA", "nodejs,java,spring,postgres,supabase,prisma,firebase,py"],
+  ["TOOLS & INFRA", "git,github,gitlab,docker,vercel,figma,postman,wordpress"],
+];
+async function stack() {
+  const W = 1200, P = 32, gap = 20, colW = (W - 2 * P - 2 * gap) / 3, H = 272;
+  const cols = await Promise.all(STACK.map(async ([label, icons], i) => {
+    const res = await fetch(`https://skillicons.dev/icons?i=${icons}&theme=light&perline=4`);
+    if (!res.ok) throw new Error(`skillicons: ${res.status}`);
+    const src = await res.text();
+    const vb = src.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
+    const iw = 280, ih = iw * (+vb[2] / +vb[1]);
+    const x = P + i * (colW + gap);
+    return `<g class="in${i + 1}">
+  <rect x="${x}" y="${P}" width="${colW}" height="${H - 2 * P}" rx="24" fill="${C.soft}"/>
+  <text x="${x + colW / 2}" y="${P + 40}" text-anchor="middle" class="eyebrow" fill="${C.text3}">${esc(label)}</text>
+  <image x="${(x + (colW - iw) / 2).toFixed(1)}" y="${P + 62}" width="${iw}" height="${ih.toFixed(1)}" href="data:image/svg+xml;base64,${Buffer.from(src).toString("base64")}"/>
+</g>`;
+  }));
+  const css = FONTS.body600() + BASE_CSS;
+  return svg(W, H, css, `
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="32" fill="${C.white}" stroke="${C.line}"/>
+${cols.join("\n")}`);
 }
 
 // ---------- stats ----------
@@ -344,5 +672,13 @@ if (process.argv.includes("--stats")) {
   write("title-stack.svg", section("03", "TECH STACK", "My everyday ", "tools", "."));
   write("title-activity.svg", section("04", "GITHUB ACTIVITY", "What I've been ", "shipping", "."));
   write("footer.svg", footer());
-  write("stats.svg", statsPlaceholder());
+  write("about.svg", about());
+  for (const [name, content] of projects()) write(name, content);
+  write("stack.svg", await stack());
+  write("btn-malt.svg", button("Find me on Malt", { variant: "coral" }));
+  write("btn-portfolio.svg", button("Portfolio"));
+  write("btn-linkedin.svg", button("LinkedIn"));
+  write("btn-email.svg", button("colasnaudi@gmail.com", { icon: "arrow" }));
+  // never overwrite the real card generated by the workflow
+  if (!existsSync(join(OUT, "stats.svg"))) write("stats.svg", statsPlaceholder());
 }
