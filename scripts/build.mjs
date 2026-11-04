@@ -86,13 +86,13 @@ function header() {
   @keyframes ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(3.2);opacity:0}}
   .loop{stroke-dasharray:7 9;animation:dash 3s linear infinite}
   `;
-  const LOOP = "M-10 404 C 110 424, 210 394, 300 410 S 282 448, 232 438 S 330 388, 480 404 S 640 446, 720 400 S 770 280, 840 266 S 900 250, 960 262 S 1060 230, 1110 236 S 1180 252, 1210 244";
+  const LOOP = "M-10 438 C 150 456, 330 418, 520 438 S 760 440, 770 330 S 700 170, 660 220 S 720 300, 800 210 S 900 120, 1210 150";
   const body = `
 <defs><clipPath id="card"><rect x="820" y="36" width="344" height="388" rx="28"/></clipPath></defs>
 <rect x=".5" y=".5" width="1199" height="459" rx="32" class="bg ln"/>
 
-<!-- mint dashed loop, like the site: one continuous line that runs behind the
-     featured card (white over the coral) and leaves through the left and right edges -->
+<!-- mint dashed loop: drawn first so every component sits on top of it; it runs
+     under the text, loops in the empty space and disappears behind the featured card -->
 <path class="loop" d="${LOOP}" stroke="${C.mint}" stroke-width="2" stroke-linecap="round" opacity=".8"/>
 
 <!-- logo + wordmark -->
@@ -129,7 +129,6 @@ function header() {
       <circle cx="1068" cy="120" r="118" stroke="${C.white}" stroke-opacity=".22" stroke-width="22"/>
       <circle cx="1068" cy="120" r="74" fill="${C.white}" fill-opacity=".22"/>
     </g>
-    <path class="loop" d="${LOOP}" stroke="${C.white}" stroke-opacity=".75" stroke-width="2" stroke-linecap="round"/>
   </g>
   <text x="852" y="84" class="eyebrow" fill="${C.ink}">FEATURED PROJECT</text>
   <text x="848" y="352" class="d" font-size="66" letter-spacing="-2.4" fill="${C.ink}">+15,000</text>
@@ -172,14 +171,14 @@ function footer() {
   `;
   const body = `
 <defs><clipPath id="f"><rect width="1200" height="260" rx="32"/></clipPath></defs>
+<rect x=".5" y=".5" width="1199" height="259" rx="32" class="bg ln"/>
 <g clip-path="url(#f)">
-  <rect width="1200" height="260" fill="${C.ink}"/>
   <circle cx="1110" cy="40" r="150" stroke="${C.coral}" stroke-opacity=".9" stroke-width="22"/>
   <circle cx="1110" cy="40" r="92" fill="${C.coral}" fill-opacity=".9"/>
   <path class="wave" d="M-10 220 C 120 190, 220 250, 360 222 S 600 180, 760 214 S 980 250, 1210 200" stroke="${C.mint}" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
 </g>
-<text x="56" y="70" class="eyebrow" fill="${C.muted}">LET'S TALK</text>
-<text x="52" y="130" class="d" font-size="46" letter-spacing="-1.8" fill="${C.white}">What are we <tspan fill="${C.coral}">building</tspan> together?</text>
+<text x="56" y="70" class="eyebrow k3">LET'S TALK</text>
+<text x="52" y="130" class="d k" font-size="46" letter-spacing="-1.8">What are we <tspan fill="${C.coral}">building</tspan> together?</text>
 <g>
   <rect x="56" y="160" width="256" height="48" rx="14" fill="${C.coral}"/>
   <text x="80" y="190" class="b" font-weight="600" font-size="16" fill="${C.ink}">colasnaudi@gmail.com</text>
@@ -245,7 +244,7 @@ const arrowUpRight = (x, y, color) =>
 // ---------- buttons ----------
 // variant "coral": always coral. variant "ink": ink in light mode, light in dark mode.
 function button(label, { variant = "ink", icon = "external" } = {}) {
-  const H = 48, padX = 22, size = 16, gap = 10, iconW = icon === "external" ? 10 : 12;
+  const H = 40, padX = 18, size = 14.5, gap = 9, iconW = icon === "external" ? 10 : 12;
   const tw = measure(label, 600, size);
   const W = Math.ceil(padX + tw + gap + iconW + padX);
   const coral = variant === "coral";
@@ -260,8 +259,8 @@ function button(label, { variant = "ink", icon = "external" } = {}) {
     ? arrowUpRight(ix, H / 2 - 5, "").replace('stroke=""', 'class="bs"')
     : arrowRight(ix, H / 2, "").replace('stroke=""', 'class="bs"');
   return svg(W, H, css, `
-<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="15.5" class="bb"/>
-<text x="${padX}" y="${H / 2 + 5.5}" class="b bf" font-weight="600" font-size="${size}">${esc(label)}</text>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="12.5" class="bb"/>
+<text x="${padX}" y="${H / 2 + 5}" class="b bf" font-weight="600" font-size="${size}">${esc(label)}</text>
 <g class="ic">${iconSvg}</g>`);
 }
 
@@ -339,7 +338,7 @@ const PROJECTS = [
       "Preparing the launch of a paid perpetual licence",
     ],
     tags: ["macOS", "Swift", "Stripe", "Product development"],
-    link: { label: "Visit cueflow.colasnaudi.com", href: "https://cueflow.colasnaudi.com" },
+    link: { label: "Visit Cueflow", href: "https://cueflow.colasnaudi.com" },
   },
   {
     file: "besta", name: "Besta", eyebrow: "CO-FOUNDER · 15,000+ DOWNLOADS", accent: C.coral,

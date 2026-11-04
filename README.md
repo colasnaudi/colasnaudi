@@ -2,11 +2,13 @@
   <img src="./assets/header.svg" width="100%" alt="Colas Naudi, full-stack developer. Web and mobile apps built to last." />
 </a>
 
+<br />
+
 <p align="center">
-  <a href="https://www.malt.fr/profile/colasnaudi"><img src="./assets/btn-malt.svg" height="48" alt="Find me on Malt" /></a>
-  <a href="https://colasnaudi.com"><img src="./assets/btn-portfolio.svg" height="48" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/colasnaudi/"><img src="./assets/btn-linkedin.svg" height="48" alt="LinkedIn" /></a>
-  <a href="mailto:colasnaudi@gmail.com"><img src="./assets/btn-email.svg" height="48" alt="colasnaudi@gmail.com" /></a>
+  <a href="https://www.malt.fr/profile/colasnaudi"><img src="./assets/btn-malt.svg" height="40" alt="Find me on Malt" /></a>
+  <a href="https://colasnaudi.com"><img src="./assets/btn-portfolio.svg" height="40" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/colasnaudi/"><img src="./assets/btn-linkedin.svg" height="40" alt="LinkedIn" /></a>
+  <a href="mailto:colasnaudi@gmail.com"><img src="./assets/btn-email.svg" height="40" alt="colasnaudi@gmail.com" /></a>
 </p>
 
 <br />
@@ -20,7 +22,7 @@
 <img src="./assets/title-projects.svg" width="100%" alt="Selected work: projects in production." />
 
 <p align="center">
-  <a href="https://cueflow.colasnaudi.com"><img src="./assets/project-cueflow.svg" width="49%" alt="Cueflow, independent product in beta: a macOS app made by a DJ, for DJs. Swift, Stripe. Visit cueflow.colasnaudi.com." /></a>
+  <a href="https://cueflow.colasnaudi.com"><img src="./assets/project-cueflow.svg" width="49%" alt="Cueflow, independent product in beta: a macOS app made by a DJ, for DJs. Swift, Stripe. Visit Cueflow." /></a>
   <a href="https://besta-app.fr"><img src="./assets/project-besta.svg" width="49%" alt="Besta, co-founder, 15,000+ downloads: event discovery and ticketing platform. React Native, Next.js, TypeScript, Supabase, PostgreSQL, Prisma, Stripe. Visit besta-app.fr." /></a>
   <a href="https://jobhunter.colasnaudi.com"><img src="./assets/project-jobhunter.svg" width="49%" alt="Job Hunter, personal project, live: an AI-powered job-search assistant. Next.js, TypeScript, AI, Google Apps Script. Visit Job Hunter." /></a>
   <img src="./assets/project-orbit.svg" width="49%" alt="ORBIT, Cegedim Assurances: AI-assisted development tool analysing Jira tickets. MCP, Jira, GitLab, Claude Vision, JavaScript." />

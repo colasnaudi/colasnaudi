@@ -51,9 +51,9 @@
 <rect x="254.4" y="406" width="165.3" height="30" rx="10" class="sf"/>
 <text x="267.4" y="425.7" class="b k" font-weight="500" font-size="13.5">Product development</text></g>
 <g class="in4">
-  <rect x="36" y="502" width="275.1" height="46" rx="15" fill="#FF5A36"/>
-  <text x="58" y="530.5" class="b" font-weight="600" font-size="15" fill="#16181A">Visit cueflow.colasnaudi.com</text>
-  <g class="ic"><path d="M279.05 530L289.05 520M281.55 520H289.05V527.5" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="36" y="502" width="159.4" height="46" rx="15" fill="#FF5A36"/>
+  <text x="58" y="530.5" class="b" font-weight="600" font-size="15" fill="#16181A">Visit Cueflow</text>
+  <g class="ic"><path d="M163.445 530L173.445 520M165.945 520H173.445V527.5" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
 </g>
 </g>
 </svg>

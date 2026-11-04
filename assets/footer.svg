@@ -18,14 +18,14 @@
   </style>
 
 <defs><clipPath id="f"><rect width="1200" height="260" rx="32"/></clipPath></defs>
+<rect x=".5" y=".5" width="1199" height="259" rx="32" class="bg ln"/>
 <g clip-path="url(#f)">
-  <rect width="1200" height="260" fill="#16181A"/>
   <circle cx="1110" cy="40" r="150" stroke="#FF5A36" stroke-opacity=".9" stroke-width="22"/>
   <circle cx="1110" cy="40" r="92" fill="#FF5A36" fill-opacity=".9"/>
   <path class="wave" d="M-10 220 C 120 190, 220 250, 360 222 S 600 180, 760 214 S 980 250, 1210 200" stroke="#9FD8CF" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
 </g>
-<text x="56" y="70" class="eyebrow" fill="#B5BABE">LET'S TALK</text>
-<text x="52" y="130" class="d" font-size="46" letter-spacing="-1.8" fill="#FFFFFF">What are we <tspan fill="#FF5A36">building</tspan> together?</text>
+<text x="56" y="70" class="eyebrow k3">LET'S TALK</text>
+<text x="52" y="130" class="d k" font-size="46" letter-spacing="-1.8">What are we <tspan fill="#FF5A36">building</tspan> together?</text>
 <g>
   <rect x="56" y="160" width="256" height="48" rx="14" fill="#FF5A36"/>
   <text x="80" y="190" class="b" font-weight="600" font-size="16" fill="#16181A">colasnaudi@gmail.com</text>
