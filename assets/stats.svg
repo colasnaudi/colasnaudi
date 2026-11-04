@@ -21,13 +21,13 @@
 <g class="in1">
   <rect x="48" y="72" width="264" height="120" rx="20" fill="#FF5A36"/>
   <text x="70" y="104" class="eyebrow" fill="#16181A">CONTRIBUTIONS</text>
-  <text x="68" y="158" class="d" font-size="46" letter-spacing="-1.6" fill="#16181A">836</text>
+  <text x="68" y="158" class="d" font-size="46" letter-spacing="-1.6" fill="#16181A">838</text>
   <text x="70" y="180" class="b" font-weight="500" font-size="13" fill="#16181A">last 12 months</text>
 </g>
 <g class="in2">
   <rect x="328" y="72" width="264" height="120" rx="20" fill="#F1F3F2"/>
   <text x="350" y="104" class="eyebrow" fill="#16181A">COMMITS</text>
-  <text x="348" y="158" class="d" font-size="46" letter-spacing="-1.6" fill="#16181A">830</text>
+  <text x="348" y="158" class="d" font-size="46" letter-spacing="-1.6" fill="#16181A">832</text>
   <text x="350" y="180" class="b" font-weight="500" font-size="13" fill="#5A5F63">last 12 months</text>
 </g>
 <g class="in3">
@@ -46,8 +46,8 @@
 <g>
   <text x="48" y="242" class="eyebrow" fill="#5A5F63">WEEKLY CONTRIBUTIONS</text>
   <line x1="48" y1="422" x2="688" y2="422" stroke="#E3E6E8"/>
-  <path class="area" d="M48.0 419.0 L60.5 418.5 L73.1 408.9 L85.6 419.0 L98.2 414.4 L110.7 406.4 L123.3 418.0 L135.8 422.0 L148.4 422.0 L160.9 422.0 L173.5 420.0 L186.0 420.5 L198.6 422.0 L211.1 421.5 L223.7 421.0 L236.2 421.5 L248.8 421.5 L261.3 419.0 L273.9 420.5 L286.4 421.0 L299.0 420.5 L311.5 421.5 L324.1 420.5 L336.6 422.0 L349.2 422.0 L361.7 421.0 L374.3 419.5 L386.8 418.5 L399.4 422.0 L411.9 422.0 L424.5 422.0 L437.0 422.0 L449.6 422.0 L462.1 420.0 L474.7 418.5 L487.2 418.5 L499.8 422.0 L512.3 421.5 L524.9 422.0 L537.4 422.0 L550.0 421.0 L562.5 422.0 L575.1 422.0 L587.6 417.5 L600.2 421.5 L612.7 390.3 L625.3 403.4 L637.8 379.7 L650.4 406.4 L662.9 382.7 L675.5 272.0 L688.0 392.8 L 688 422 L 48 422 Z" fill="#FFD0BD" fill-opacity=".55"/>
-  <path class="draw" d="M48.0 419.0 L60.5 418.5 L73.1 408.9 L85.6 419.0 L98.2 414.4 L110.7 406.4 L123.3 418.0 L135.8 422.0 L148.4 422.0 L160.9 422.0 L173.5 420.0 L186.0 420.5 L198.6 422.0 L211.1 421.5 L223.7 421.0 L236.2 421.5 L248.8 421.5 L261.3 419.0 L273.9 420.5 L286.4 421.0 L299.0 420.5 L311.5 421.5 L324.1 420.5 L336.6 422.0 L349.2 422.0 L361.7 421.0 L374.3 419.5 L386.8 418.5 L399.4 422.0 L411.9 422.0 L424.5 422.0 L437.0 422.0 L449.6 422.0 L462.1 420.0 L474.7 418.5 L487.2 418.5 L499.8 422.0 L512.3 421.5 L524.9 422.0 L537.4 422.0 L550.0 421.0 L562.5 422.0 L575.1 422.0 L587.6 417.5 L600.2 421.5 L612.7 390.3 L625.3 403.4 L637.8 379.7 L650.4 406.4 L662.9 382.7 L675.5 272.0 L688.0 392.8" stroke="#FF5A36" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path class="area" d="M48.0 419.0 L60.5 418.5 L73.1 408.9 L85.6 419.0 L98.2 414.4 L110.7 406.4 L123.3 418.0 L135.8 422.0 L148.4 422.0 L160.9 422.0 L173.5 420.0 L186.0 420.5 L198.6 422.0 L211.1 421.5 L223.7 421.0 L236.2 421.5 L248.8 421.5 L261.3 419.0 L273.9 420.5 L286.4 421.0 L299.0 420.5 L311.5 421.5 L324.1 420.5 L336.6 422.0 L349.2 422.0 L361.7 421.0 L374.3 419.5 L386.8 418.5 L399.4 422.0 L411.9 422.0 L424.5 422.0 L437.0 422.0 L449.6 422.0 L462.1 420.0 L474.7 418.5 L487.2 418.5 L499.8 422.0 L512.3 421.5 L524.9 422.0 L537.4 422.0 L550.0 421.0 L562.5 422.0 L575.1 422.0 L587.6 417.5 L600.2 421.5 L612.7 390.3 L625.3 403.4 L637.8 379.7 L650.4 406.4 L662.9 382.7 L675.5 272.0 L688.0 391.8 L 688 422 L 48 422 Z" fill="#FFD0BD" fill-opacity=".55"/>
+  <path class="draw" d="M48.0 419.0 L60.5 418.5 L73.1 408.9 L85.6 419.0 L98.2 414.4 L110.7 406.4 L123.3 418.0 L135.8 422.0 L148.4 422.0 L160.9 422.0 L173.5 420.0 L186.0 420.5 L198.6 422.0 L211.1 421.5 L223.7 421.0 L236.2 421.5 L248.8 421.5 L261.3 419.0 L273.9 420.5 L286.4 421.0 L299.0 420.5 L311.5 421.5 L324.1 420.5 L336.6 422.0 L349.2 422.0 L361.7 421.0 L374.3 419.5 L386.8 418.5 L399.4 422.0 L411.9 422.0 L424.5 422.0 L437.0 422.0 L449.6 422.0 L462.1 420.0 L474.7 418.5 L487.2 418.5 L499.8 422.0 L512.3 421.5 L524.9 422.0 L537.4 422.0 L550.0 421.0 L562.5 422.0 L575.1 422.0 L587.6 417.5 L600.2 421.5 L612.7 390.3 L625.3 403.4 L637.8 379.7 L650.4 406.4 L662.9 382.7 L675.5 272.0 L688.0 391.8" stroke="#FF5A36" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
   <g class="area">
     <circle cx="675.4509803921568" cy="272" r="6" fill="#FFFFFF" stroke="#16181A" stroke-width="2.5"/>
     <text x="608" y="258" class="b" font-weight="600" font-size="13" fill="#16181A">peak: 298</text>
@@ -58,36 +58,36 @@
 
 <g>
   <text x="736" y="242" class="eyebrow" fill="#5A5F63">MOST USED LANGUAGES</text>
-  <g class="grow"><rect x="736.0" y="264" width="127.8" height="18" rx="5" fill="#FF5A36"/><rect x="866.8" y="264" width="70.6" height="18" rx="5" fill="#16181A"/><rect x="940.4" y="264" width="67.7" height="18" rx="5" fill="#9FD8CF"/><rect x="1011.2" y="264" width="57.9" height="18" rx="5" fill="#FFBFA6"/><rect x="1072.1" y="264" width="46.4" height="18" rx="5" fill="#A8300C"/><rect x="1121.5" y="264" width="27.5" height="18" rx="5" fill="#B5BABE"/></g>
+  <g class="grow"><rect x="736.0" y="264" width="124.2" height="18" rx="5" fill="#FF5A36"/><rect x="863.2" y="264" width="68.6" height="18" rx="5" fill="#16181A"/><rect x="934.8" y="264" width="65.8" height="18" rx="5" fill="#9FD8CF"/><rect x="1003.6" y="264" width="56.2" height="18" rx="5" fill="#FFBFA6"/><rect x="1062.8" y="264" width="45.0" height="18" rx="5" fill="#A8300C"/><rect x="1110.8" y="264" width="38.2" height="18" rx="5" fill="#B5BABE"/></g>
   <g class="in1">
   <rect x="736" y="312" width="12" height="12" rx="3.5" fill="#FF5A36"/>
   <text x="758" y="322" class="b" font-weight="500" font-size="15" fill="#16181A">PHP</text>
-  <text x="1152" y="322" text-anchor="end" class="b" font-size="15" fill="#5A5F63">31.4%</text>
+  <text x="1152" y="322" text-anchor="end" class="b" font-size="15" fill="#5A5F63">30.6%</text>
 </g>
 <g class="in2">
   <rect x="736" y="336" width="12" height="12" rx="3.5" fill="#16181A"/>
   <text x="758" y="346" class="b" font-weight="500" font-size="15" fill="#16181A">Python</text>
-  <text x="1152" y="346" text-anchor="end" class="b" font-size="15" fill="#5A5F63">17.7%</text>
+  <text x="1152" y="346" text-anchor="end" class="b" font-size="15" fill="#5A5F63">17.2%</text>
 </g>
 <g class="in3">
   <rect x="736" y="360" width="12" height="12" rx="3.5" fill="#9FD8CF"/>
   <text x="758" y="370" class="b" font-weight="500" font-size="15" fill="#16181A">Jupyter Notebook</text>
-  <text x="1152" y="370" text-anchor="end" class="b" font-size="15" fill="#5A5F63">17.0%</text>
+  <text x="1152" y="370" text-anchor="end" class="b" font-size="15" fill="#5A5F63">16.5%</text>
 </g>
 <g class="in4">
   <rect x="736" y="384" width="12" height="12" rx="3.5" fill="#FFBFA6"/>
   <text x="758" y="394" class="b" font-weight="500" font-size="15" fill="#16181A">Swift</text>
-  <text x="1152" y="394" text-anchor="end" class="b" font-size="15" fill="#5A5F63">14.6%</text>
+  <text x="1152" y="394" text-anchor="end" class="b" font-size="15" fill="#5A5F63">14.2%</text>
 </g>
 <g class="in4">
   <rect x="736" y="408" width="12" height="12" rx="3.5" fill="#A8300C"/>
   <text x="758" y="418" class="b" font-weight="500" font-size="15" fill="#16181A">CSS</text>
-  <text x="1152" y="418" text-anchor="end" class="b" font-size="15" fill="#5A5F63">11.9%</text>
+  <text x="1152" y="418" text-anchor="end" class="b" font-size="15" fill="#5A5F63">11.5%</text>
 </g>
 <g class="in4">
   <rect x="736" y="432" width="12" height="12" rx="3.5" fill="#B5BABE"/>
   <text x="758" y="442" class="b" font-weight="500" font-size="15" fill="#16181A">Other</text>
-  <text x="1152" y="442" text-anchor="end" class="b" font-size="15" fill="#5A5F63">7.3%</text>
+  <text x="1152" y="442" text-anchor="end" class="b" font-size="15" fill="#5A5F63">9.9%</text>
 </g>
 </g>
 </svg>
