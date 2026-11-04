@@ -258,10 +258,15 @@ function button(label, { variant = "ink", icon = "external" } = {}) {
   const iconSvg = icon === "external"
     ? arrowUpRight(ix, H / 2 - 5, "").replace('stroke=""', 'class="bs"')
     : arrowRight(ix, H / 2, "").replace('stroke=""', 'class="bs"');
-  return svg(W, H, css, `
+  // TOP: transparent space above the button, to breathe under the header
+  // (GitHub strips CSS margins, so the gap lives inside the image)
+  const TOP = 14;
+  return svg(W, H + TOP, css, `
+<g transform="translate(0 ${TOP})">
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="12.5" class="bb"/>
 <text x="${padX}" y="${H / 2 + 5}" class="b bf" font-weight="600" font-size="${size}">${esc(label)}</text>
-<g class="ic">${iconSvg}</g>`);
+<g class="ic">${iconSvg}</g>
+</g>`);
 }
 
 // ---------- about ----------
