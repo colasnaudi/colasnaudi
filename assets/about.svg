@@ -6,45 +6,49 @@
   .in1,.in2,.in3,.in4{animation:in .9s cubic-bezier(.2,.8,.2,1) backwards}
   .in1{animation-delay:.05s}.in2{animation-delay:.2s}.in3{animation-delay:.35s}.in4{animation-delay:.5s}
   @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .bg{fill:#FFFFFF} .ln{stroke:#E3E6E8} .sf{fill:#F1F3F2} .k{fill:#16181A} .k2{fill:#464B4F} .k3{fill:#5A5F63} .km{fill:#B5BABE} .ks{stroke:#16181A}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#151B23} .ln{stroke:#2A313C} .sf{fill:#212830} .k{fill:#F0F3F6} .k2{fill:#B7BDC6} .k3{fill:#8D96A0} .km{fill:#6E7681} .ks{stroke:#F0F3F6}
+  }
 
-  .dot{transform-origin:752px 0;transform-box:fill-box;animation:ping 1.8s ease-out infinite}
+  .dot{transform-box:fill-box;transform-origin:center;animation:ping 1.8s ease-out infinite}
   @keyframes ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(3.2);opacity:0}}
   </style>
 
-<rect x=".5" y=".5" width="1199" height="520" rx="32" fill="#FFFFFF" stroke="#E3E6E8"/>
-<rect x="712" y="40" width="432" height="441" rx="24" fill="#F1F3F2"/>
-<g class="in1"><text x="56" y="96.0" class="b" font-weight="400" font-size="20" fill="#464B4F">I'm a full-stack developer based in <tspan font-weight="600" fill="#16181A">Paris</tspan>, originally from the</text>
-<text x="56" y="127.0" class="b" font-weight="400" font-size="20" fill="#464B4F">French Basque Country.</text></g>
-<g class="in2"><text x="56" y="178.0" class="b" font-weight="400" font-size="20" fill="#464B4F">I enjoy building digital products <tspan font-weight="600" fill="#16181A">end to end</tspan>, from architecture</text>
-<text x="56" y="209.0" class="b" font-weight="400" font-size="20" fill="#464B4F">and backend development to user interfaces, mobile</text>
-<text x="56" y="240.0" class="b" font-weight="400" font-size="20" fill="#464B4F">applications and deployment.</text></g>
-<g class="in3"><text x="56" y="291.0" class="b" font-weight="400" font-size="20" fill="#464B4F">I'm particularly interested in <tspan font-weight="600" fill="#16181A">product engineering</tspan>:</text>
-<text x="56" y="322.0" class="b" font-weight="400" font-size="20" fill="#464B4F">understanding a problem, designing a solution and taking it all</text>
-<text x="56" y="353.0" class="b" font-weight="400" font-size="20" fill="#464B4F">the way to production.</text></g>
-<g class="in4"><text x="56" y="404.0" class="b" font-weight="400" font-size="20" fill="#464B4F">My main areas of focus are <tspan font-weight="600" fill="#16181A">React, Next.js, TypeScript, React</tspan></text>
-<text x="56" y="435.0" class="b" font-weight="400" font-size="20" fill="#464B4F"><tspan font-weight="600" fill="#16181A">Native</tspan> and backend development.</text></g>
+<rect x=".5" y=".5" width="1199" height="520" rx="32" class="bg ln"/>
+<rect x="712" y="40" width="432" height="441" rx="24" class="sf"/>
+<g class="in1"><text x="56" y="96.0" class="b k2" font-weight="400" font-size="20">I'm a full-stack developer based in <tspan font-weight="600" class="k">Paris</tspan>, originally from the</text>
+<text x="56" y="127.0" class="b k2" font-weight="400" font-size="20">French Basque Country.</text></g>
+<g class="in2"><text x="56" y="178.0" class="b k2" font-weight="400" font-size="20">I enjoy building digital products <tspan font-weight="600" class="k">end to end</tspan>, from architecture</text>
+<text x="56" y="209.0" class="b k2" font-weight="400" font-size="20">and backend development to user interfaces, mobile</text>
+<text x="56" y="240.0" class="b k2" font-weight="400" font-size="20">applications and deployment.</text></g>
+<g class="in3"><text x="56" y="291.0" class="b k2" font-weight="400" font-size="20">I'm particularly interested in <tspan font-weight="600" class="k">product engineering</tspan>:</text>
+<text x="56" y="322.0" class="b k2" font-weight="400" font-size="20">understanding a problem, designing a solution and taking it all</text>
+<text x="56" y="353.0" class="b k2" font-weight="400" font-size="20">the way to production.</text></g>
+<g class="in4"><text x="56" y="404.0" class="b k2" font-weight="400" font-size="20">My main areas of focus are <tspan font-weight="600" class="k">React, Next.js, TypeScript, React</tspan></text>
+<text x="56" y="435.0" class="b k2" font-weight="400" font-size="20"><tspan font-weight="600" class="k">Native</tspan> and backend development.</text></g>
 <g class="in1">
-  <text x="744" y="92" class="eyebrow" fill="#5A5F63">EDUCATION</text>
-  <text x="744" y="119" class="d" font-size="21" letter-spacing="-.5" fill="#16181A">Master MIAGE</text>
-  <text x="744" y="142" class="b" font-weight="400" font-size="15" fill="#464B4F">Université Toulouse Capitole</text>
+  <text x="744" y="92" class="eyebrow k3">EDUCATION</text>
+  <text x="744" y="119" class="d k" font-size="21" letter-spacing="-.5">Master MIAGE</text>
+  <text x="744" y="142" class="b k2" font-weight="400" font-size="15">Université Toulouse Capitole</text>
 </g>
-<line x1="744" y1="150" x2="1112" y2="150" stroke="#E3E6E8"/>
+<line x1="744" y1="150" x2="1112" y2="150" class="ln"/>
 <g class="in2">
-  <text x="744" y="176" class="eyebrow" fill="#5A5F63">EXPERIENCE</text>
-  <text x="744" y="203" class="d" font-size="21" letter-spacing="-.5" fill="#16181A">4 years of work-study</text>
-  <text x="744" y="226" class="b" font-weight="400" font-size="15" fill="#464B4F">NOBATEK/INEF4 and Cegedim Assurances</text>
+  <text x="744" y="176" class="eyebrow k3">EXPERIENCE</text>
+  <text x="744" y="203" class="d k" font-size="21" letter-spacing="-.5">4 years of work-study</text>
+  <text x="744" y="226" class="b k2" font-weight="400" font-size="15">NOBATEK/INEF4 and Cegedim Assurances</text>
 </g>
-<line x1="744" y1="234" x2="1112" y2="234" stroke="#E3E6E8"/>
+<line x1="744" y1="234" x2="1112" y2="234" class="ln"/>
 <g class="in3">
-  <text x="744" y="260" class="eyebrow" fill="#5A5F63">ENTREPRENEURSHIP</text>
-  <text x="744" y="287" class="d" font-size="21" letter-spacing="-.5" fill="#16181A">Co-founder of Besta</text>
-  <text x="744" y="310" class="b" font-weight="400" font-size="15" fill="#464B4F">A digital product studio</text>
+  <text x="744" y="260" class="eyebrow k3">ENTREPRENEURSHIP</text>
+  <text x="744" y="287" class="d k" font-size="21" letter-spacing="-.5">Co-founder of Besta</text>
+  <text x="744" y="310" class="b k2" font-weight="400" font-size="15">A digital product studio</text>
 </g>
-<line x1="744" y1="318" x2="1112" y2="318" stroke="#E3E6E8"/>
+<line x1="744" y1="318" x2="1112" y2="318" class="ln"/>
 <g class="in4">
-  <text x="744" y="344" class="eyebrow" fill="#5A5F63">INDEPENDENT PRODUCT</text>
-  <text x="744" y="371" class="d" font-size="21" letter-spacing="-.5" fill="#16181A">Building Cueflow</text>
-  <text x="744" y="394" class="b" font-weight="400" font-size="15" fill="#464B4F">A macOS app for DJs</text>
+  <text x="744" y="344" class="eyebrow k3">INDEPENDENT PRODUCT</text>
+  <text x="744" y="371" class="d k" font-size="21" letter-spacing="-.5">Building Cueflow</text>
+  <text x="744" y="394" class="b k2" font-weight="400" font-size="15">A macOS app for DJs</text>
 </g>
 <g class="in4">
   <rect x="732" y="420" width="392" height="48" rx="16" fill="#FF5A36"/>

@@ -6,6 +6,10 @@
   .in1,.in2,.in3,.in4{animation:in .9s cubic-bezier(.2,.8,.2,1) backwards}
   .in1{animation-delay:.05s}.in2{animation-delay:.2s}.in3{animation-delay:.35s}.in4{animation-delay:.5s}
   @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .bg{fill:#FFFFFF} .ln{stroke:#E3E6E8} .sf{fill:#F1F3F2} .k{fill:#16181A} .k2{fill:#464B4F} .k3{fill:#5A5F63} .km{fill:#B5BABE} .ks{stroke:#16181A}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#151B23} .ln{stroke:#2A313C} .sf{fill:#212830} .k{fill:#F0F3F6} .k2{fill:#B7BDC6} .k3{fill:#8D96A0} .km{fill:#6E7681} .ks{stroke:#F0F3F6}
+  }
 
   .ring{transform-origin:570px 10px;animation:breathe 6s ease-in-out infinite}
   @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
@@ -15,39 +19,39 @@
 
 <g transform="translate(8 8)">
 <defs><clipPath id="c"><rect width="600" height="546" rx="28"/></clipPath></defs>
-<rect x=".5" y=".5" width="599" height="545" rx="28" fill="#FFFFFF" stroke="#E3E6E8"/>
+<rect x=".5" y=".5" width="599" height="545" rx="28" class="bg ln"/>
 <g clip-path="url(#c)"><g class="ring">
-  <circle cx="570" cy="10" r="96" stroke="#16181A" stroke-opacity=".9" stroke-width="18"/>
-  <circle cx="570" cy="10" r="56" fill="#16181A" fill-opacity=".9"/>
+  <circle cx="570" cy="10" r="96" stroke="#A8300C" stroke-opacity=".9" stroke-width="18"/>
+  <circle cx="570" cy="10" r="56" fill="#A8300C" fill-opacity=".9"/>
 </g></g>
 <g class="in1">
-  <rect x="36" y="36" width="299.2" height="30" rx="15" fill="#F1F3F2"/>
-  <rect x="49" y="46" width="10" height="10" rx="3" fill="#16181A"/>
-  <text x="68" y="55.5" class="eyebrow" fill="#2E3236">CEGEDIM ASSURANCES · AI TOOLING</text>
+  <rect x="36" y="36" width="299.2" height="30" rx="15" class="sf"/>
+  <rect x="49" y="46" width="10" height="10" rx="3" fill="#A8300C"/>
+  <text x="68" y="55.5" class="eyebrow k">CEGEDIM ASSURANCES · AI TOOLING</text>
 </g>
-<text x="34" y="122" class="d in2" font-size="44" letter-spacing="-1.6" fill="#16181A">ORBIT</text>
-<g class="in2"><text x="36" y="158.0" class="b" font-weight="600" font-size="19" fill="#16181A">AI-assisted development tool.</text></g>
-<g class="in3"><text x="36" y="186.0" class="b" font-weight="400" font-size="16" fill="#464B4F">Analyses Jira tickets by gathering context from multiple sources and</text>
-<text x="36" y="210.0" class="b" font-weight="400" font-size="16" fill="#464B4F">document formats. My contributions:</text></g>
-<line x1="36" y1="232" x2="564" y2="232" stroke="#E3E6E8" class="in3"/>
+<text x="34" y="122" class="d k in2" font-size="44" letter-spacing="-1.6">ORBIT</text>
+<g class="in2"><text x="36" y="158.0" class="b k" font-weight="600" font-size="19">AI-assisted development tool.</text></g>
+<g class="in3"><text x="36" y="186.0" class="b k2" font-weight="400" font-size="16">Analyses Jira tickets by gathering context from multiple sources and</text>
+<text x="36" y="210.0" class="b k2" font-weight="400" font-size="16">document formats. My contributions:</text></g>
+<line x1="36" y1="232" x2="564" y2="232" class="ln in3"/>
 <g class="in3"><rect x="36" y="255" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="264.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Jira integration through a custom MCP server</text>
+<text x="58" y="264.0" class="b k" font-weight="500" font-size="15.5">Jira integration through a custom MCP server</text>
 <rect x="36" y="287" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="296.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Information extraction from text and office documents</text>
+<text x="58" y="296.0" class="b k" font-weight="500" font-size="15.5">Information extraction from text and office documents</text>
 <rect x="36" y="319" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="328.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Screenshot processing with Claude Vision</text>
+<text x="58" y="328.0" class="b k" font-weight="500" font-size="15.5">Screenshot processing with Claude Vision</text>
 <rect x="36" y="351" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="360.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Structuring context for ticket analysis</text></g>
-<g class="in4"><rect x="36.0" y="406" width="55.3" height="30" rx="10" fill="#F1F3F2"/>
-<text x="49.0" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">MCP</text>
-<rect x="99.3" y="406" width="49.0" height="30" rx="10" fill="#F1F3F2"/>
-<text x="112.3" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">Jira</text>
-<rect x="156.3" y="406" width="68.5" height="30" rx="10" fill="#F1F3F2"/>
-<text x="169.3" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">GitLab</text>
-<rect x="232.8" y="406" width="113.1" height="30" rx="10" fill="#F1F3F2"/>
-<text x="245.8" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">Claude Vision</text>
-<rect x="353.9" y="406" width="93.6" height="30" rx="10" fill="#F1F3F2"/>
-<text x="366.9" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">JavaScript</text></g>
+<text x="58" y="360.0" class="b k" font-weight="500" font-size="15.5">Structuring context for ticket analysis</text></g>
+<g class="in4"><rect x="36.0" y="406" width="55.3" height="30" rx="10" class="sf"/>
+<text x="49.0" y="425.7" class="b k" font-weight="500" font-size="13.5">MCP</text>
+<rect x="99.3" y="406" width="49.0" height="30" rx="10" class="sf"/>
+<text x="112.3" y="425.7" class="b k" font-weight="500" font-size="13.5">Jira</text>
+<rect x="156.3" y="406" width="68.5" height="30" rx="10" class="sf"/>
+<text x="169.3" y="425.7" class="b k" font-weight="500" font-size="13.5">GitLab</text>
+<rect x="232.8" y="406" width="113.1" height="30" rx="10" class="sf"/>
+<text x="245.8" y="425.7" class="b k" font-weight="500" font-size="13.5">Claude Vision</text>
+<rect x="353.9" y="406" width="93.6" height="30" rx="10" class="sf"/>
+<text x="366.9" y="425.7" class="b k" font-weight="500" font-size="13.5">JavaScript</text></g>
 
 </g>
 </svg>

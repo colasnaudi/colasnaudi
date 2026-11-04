@@ -6,6 +6,10 @@
   .in1,.in2,.in3,.in4{animation:in .9s cubic-bezier(.2,.8,.2,1) backwards}
   .in1{animation-delay:.05s}.in2{animation-delay:.2s}.in3{animation-delay:.35s}.in4{animation-delay:.5s}
   @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .bg{fill:#FFFFFF} .ln{stroke:#E3E6E8} .sf{fill:#F1F3F2} .k{fill:#16181A} .k2{fill:#464B4F} .k3{fill:#5A5F63} .km{fill:#B5BABE} .ks{stroke:#16181A}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#151B23} .ln{stroke:#2A313C} .sf{fill:#212830} .k{fill:#F0F3F6} .k2{fill:#B7BDC6} .k3{fill:#8D96A0} .km{fill:#6E7681} .ks{stroke:#F0F3F6}
+  }
 
   .wave{stroke-dasharray:8 8;animation:dash 2.4s linear infinite}
   @keyframes dash{to{stroke-dashoffset:-32}}

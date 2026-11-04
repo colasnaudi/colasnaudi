@@ -20,7 +20,7 @@
 <img src="./assets/title-projects.svg" width="100%" alt="Selected work: projects in production." />
 
 <p align="center">
-  <img src="./assets/project-cueflow.svg" width="49%" alt="Cueflow, independent product in beta: a macOS app made by a DJ, for DJs. Swift, Stripe." />
+  <a href="https://cueflow.colasnaudi.com"><img src="./assets/project-cueflow.svg" width="49%" alt="Cueflow, independent product in beta: a macOS app made by a DJ, for DJs. Swift, Stripe. Visit cueflow.colasnaudi.com." /></a>
   <a href="https://besta-app.fr"><img src="./assets/project-besta.svg" width="49%" alt="Besta, co-founder, 15,000+ downloads: event discovery and ticketing platform. React Native, Next.js, TypeScript, Supabase, PostgreSQL, Prisma, Stripe. Visit besta-app.fr." /></a>
   <a href="https://jobhunter.colasnaudi.com"><img src="./assets/project-jobhunter.svg" width="49%" alt="Job Hunter, personal project, live: an AI-powered job-search assistant. Next.js, TypeScript, AI, Google Apps Script. Visit Job Hunter." /></a>
   <img src="./assets/project-orbit.svg" width="49%" alt="ORBIT, Cegedim Assurances: AI-assisted development tool analysing Jira tickets. MCP, Jira, GitLab, Claude Vision, JavaScript." />

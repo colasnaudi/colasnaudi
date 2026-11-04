@@ -6,6 +6,10 @@
   .in1,.in2,.in3,.in4{animation:in .9s cubic-bezier(.2,.8,.2,1) backwards}
   .in1{animation-delay:.05s}.in2{animation-delay:.2s}.in3{animation-delay:.35s}.in4{animation-delay:.5s}
   @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .bg{fill:#FFFFFF} .ln{stroke:#E3E6E8} .sf{fill:#F1F3F2} .k{fill:#16181A} .k2{fill:#464B4F} .k3{fill:#5A5F63} .km{fill:#B5BABE} .ks{stroke:#16181A}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#151B23} .ln{stroke:#2A313C} .sf{fill:#212830} .k{fill:#F0F3F6} .k2{fill:#B7BDC6} .k3{fill:#8D96A0} .km{fill:#6E7681} .ks{stroke:#F0F3F6}
+  }
 
   .ring{transform-origin:570px 10px;animation:breathe 6s ease-in-out infinite}
   @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
@@ -15,43 +19,43 @@
 
 <g transform="translate(8 8)">
 <defs><clipPath id="c"><rect width="600" height="584" rx="28"/></clipPath></defs>
-<rect x=".5" y=".5" width="599" height="583" rx="28" fill="#FFFFFF" stroke="#E3E6E8"/>
+<rect x=".5" y=".5" width="599" height="583" rx="28" class="bg ln"/>
 <g clip-path="url(#c)"><g class="ring">
   <circle cx="570" cy="10" r="96" stroke="#FF5A36" stroke-opacity=".9" stroke-width="18"/>
   <circle cx="570" cy="10" r="56" fill="#FF5A36" fill-opacity=".9"/>
 </g></g>
 <g class="in1">
-  <rect x="36" y="36" width="304.1" height="30" rx="15" fill="#F1F3F2"/>
+  <rect x="36" y="36" width="304.1" height="30" rx="15" class="sf"/>
   <rect x="49" y="46" width="10" height="10" rx="3" fill="#FF5A36"/>
-  <text x="68" y="55.5" class="eyebrow" fill="#2E3236">CO-FOUNDER · 15,000+ DOWNLOADS</text>
+  <text x="68" y="55.5" class="eyebrow k">CO-FOUNDER · 15,000+ DOWNLOADS</text>
 </g>
-<text x="34" y="122" class="d in2" font-size="44" letter-spacing="-1.6" fill="#16181A">Besta</text>
-<g class="in2"><text x="36" y="158.0" class="b" font-weight="600" font-size="19" fill="#16181A">Event discovery and ticketing platform.</text></g>
-<g class="in3"><text x="36" y="186.0" class="b" font-weight="400" font-size="16" fill="#464B4F">A mobile app for events and outings across the South-West of France,</text>
-<text x="36" y="210.0" class="b" font-weight="400" font-size="16" fill="#464B4F">plus pro and admin tools for organisers and venues.</text></g>
-<line x1="36" y1="232" x2="564" y2="232" stroke="#E3E6E8" class="in3"/>
+<text x="34" y="122" class="d k in2" font-size="44" letter-spacing="-1.6">Besta</text>
+<g class="in2"><text x="36" y="158.0" class="b k" font-weight="600" font-size="19">Event discovery and ticketing platform.</text></g>
+<g class="in3"><text x="36" y="186.0" class="b k2" font-weight="400" font-size="16">A mobile app for events and outings across the South-West of France,</text>
+<text x="36" y="210.0" class="b k2" font-weight="400" font-size="16">plus pro and admin tools for organisers and venues.</text></g>
+<line x1="36" y1="232" x2="564" y2="232" class="ln in3"/>
 <g class="in3"><rect x="36" y="255" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="264.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Cross-platform mobile app, built and maintained</text>
+<text x="58" y="264.0" class="b k" font-weight="500" font-size="15.5">Cross-platform mobile app, built and maintained</text>
 <rect x="36" y="287" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="296.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Professional back-office and admin area</text>
+<text x="58" y="296.0" class="b k" font-weight="500" font-size="15.5">Professional back-office and admin area</text>
 <rect x="36" y="319" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="328.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Subscriptions, ticketing and checkout with Stripe</text>
+<text x="58" y="328.0" class="b k" font-weight="500" font-size="15.5">Subscriptions, ticketing and checkout with Stripe</text>
 <rect x="36" y="351" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="360.0" class="b" font-weight="500" font-size="15.5" fill="#2E3236">Product, technical architecture and delivery</text></g>
-<g class="in4"><rect x="36.0" y="406" width="107.3" height="30" rx="10" fill="#F1F3F2"/>
-<text x="49.0" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">React Native</text>
-<rect x="151.3" y="406" width="69.0" height="30" rx="10" fill="#F1F3F2"/>
-<text x="164.3" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">Next.js</text>
-<rect x="228.3" y="406" width="96.2" height="30" rx="10" fill="#F1F3F2"/>
-<text x="241.3" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">TypeScript</text>
-<rect x="332.4" y="406" width="88.7" height="30" rx="10" fill="#F1F3F2"/>
-<text x="345.4" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">Supabase</text>
-<rect x="429.2" y="406" width="100.8" height="30" rx="10" fill="#F1F3F2"/>
-<text x="442.2" y="425.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">PostgreSQL</text>
-<rect x="36.0" y="444" width="69.2" height="30" rx="10" fill="#F1F3F2"/>
-<text x="49.0" y="463.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">Prisma</text>
-<rect x="113.2" y="444" width="64.3" height="30" rx="10" fill="#F1F3F2"/>
-<text x="126.2" y="463.7" class="b" font-weight="500" font-size="13.5" fill="#16181A">Stripe</text></g>
+<text x="58" y="360.0" class="b k" font-weight="500" font-size="15.5">Product, technical architecture and delivery</text></g>
+<g class="in4"><rect x="36.0" y="406" width="107.3" height="30" rx="10" class="sf"/>
+<text x="49.0" y="425.7" class="b k" font-weight="500" font-size="13.5">React Native</text>
+<rect x="151.3" y="406" width="69.0" height="30" rx="10" class="sf"/>
+<text x="164.3" y="425.7" class="b k" font-weight="500" font-size="13.5">Next.js</text>
+<rect x="228.3" y="406" width="96.2" height="30" rx="10" class="sf"/>
+<text x="241.3" y="425.7" class="b k" font-weight="500" font-size="13.5">TypeScript</text>
+<rect x="332.4" y="406" width="88.7" height="30" rx="10" class="sf"/>
+<text x="345.4" y="425.7" class="b k" font-weight="500" font-size="13.5">Supabase</text>
+<rect x="429.2" y="406" width="100.8" height="30" rx="10" class="sf"/>
+<text x="442.2" y="425.7" class="b k" font-weight="500" font-size="13.5">PostgreSQL</text>
+<rect x="36.0" y="444" width="69.2" height="30" rx="10" class="sf"/>
+<text x="49.0" y="463.7" class="b k" font-weight="500" font-size="13.5">Prisma</text>
+<rect x="113.2" y="444" width="64.3" height="30" rx="10" class="sf"/>
+<text x="126.2" y="463.7" class="b k" font-weight="500" font-size="13.5">Stripe</text></g>
 <g class="in4">
   <rect x="36" y="502" width="192.9" height="46" rx="15" fill="#FF5A36"/>
   <text x="58" y="530.5" class="b" font-weight="600" font-size="15" fill="#16181A">Visit besta-app.fr</text>

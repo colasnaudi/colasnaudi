@@ -6,14 +6,18 @@
   .in1,.in2,.in3,.in4{animation:in .9s cubic-bezier(.2,.8,.2,1) backwards}
   .in1{animation-delay:.05s}.in2{animation-delay:.2s}.in3{animation-delay:.35s}.in4{animation-delay:.5s}
   @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .bg{fill:#FFFFFF} .ln{stroke:#E3E6E8} .sf{fill:#F1F3F2} .k{fill:#16181A} .k2{fill:#464B4F} .k3{fill:#5A5F63} .km{fill:#B5BABE} .ks{stroke:#16181A}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#151B23} .ln{stroke:#2A313C} .sf{fill:#212830} .k{fill:#F0F3F6} .k2{fill:#B7BDC6} .k3{fill:#8D96A0} .km{fill:#6E7681} .ks{stroke:#F0F3F6}
+  }
 
-  .bg{fill:#16181A} .fg{fill:#FFFFFF} .st{stroke:#FFFFFF}
-  @media (prefers-color-scheme: dark){ .bg{fill:#F0F3F6} .fg{fill:#16181A} .st{stroke:#16181A} }
+  .bb{fill:#16181A} .bf{fill:#FFFFFF} .bs{stroke:#FFFFFF}
+  @media (prefers-color-scheme: dark){ .bb{fill:#212830;stroke:#3A424D} .bf{fill:#F0F3F6} .bs{stroke:#F0F3F6} }
   .ic{animation:nudge 1.8s ease-in-out infinite}
   @keyframes nudge{0%,100%{transform:none}50%{transform:translate(3px,0)}}
   </style>
 
-<rect width="246" height="48" rx="16" class="bg"/>
-<text x="22" y="29.5" class="b fg" font-weight="600" font-size="16">colasnaudi@gmail.com</text>
-<g class="ic"><path d="M211.904 24h12m-5 -5l5 5l-5 5" class="st" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="245" height="47" rx="15.5" class="bb"/>
+<text x="22" y="29.5" class="b bf" font-weight="600" font-size="16">colasnaudi@gmail.com</text>
+<g class="ic"><path d="M211.904 24h12m-5 -5l5 5l-5 5" class="bs" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
 </svg>
