@@ -3,7 +3,7 @@
 </a>
 
 <br />
-
+<br />
 <p align="center">
   <a href="https://www.malt.fr/profile/colasnaudi"><img src="./assets/btn-malt.svg" height="54" alt="Find me on Malt" /></a>
   <a href="https://colasnaudi.com"><img src="./assets/btn-portfolio.svg" height="54" alt="Portfolio" /></a>

@@ -46,6 +46,12 @@ jobs:
             dist/snake.svg?color_snake=#FF5A36&color_dots=#F1F3F2,#FFD0BD,#FFA184,#FF5A36,#A8300C
             dist/snake-dark.svg?palette=github-dark&color_snake=#FF5A36&color_dots=#161B22,#4A2418,#7A3420,#C9462A,#FF5A36
 
+      # snk has no option to hide the progress bar under the grid:
+      # drop its rects (class "u") and crop the 16px it took at the bottom
+      - name: Remove the snake progress bar
+        run: |
+          sudo perl -0pi -e 's/<rect class="u [^>]*\/>//g; s/(<svg viewBox="\S+ \S+ \S+ )(\d+)(" width="\d+" height=")(\d+)/$1.($2-16).$3.($4-16)/e' dist/snake.svg dist/snake-dark.svg
+
       - name: Push snake to the output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
