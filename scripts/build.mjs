@@ -281,7 +281,7 @@ const ABOUT = {
     ["EDUCATION", "Master MIAGE", "Université Toulouse Capitole"],
     ["EXPERIENCE", "4 years of work-study", "NOBATEK/INEF4 and Cegedim Assurances"],
     ["ENTREPRENEURSHIP", "Co-founder of Besta", "A digital product studio"],
-    ["INDEPENDENT PRODUCT", "Building Cueflow", "A macOS app for DJs"],
+    ["INDEPENDENT PRODUCT", "Building Cueflow", "A macOS & Windows app for DJs"],
   ],
   now: "Open to full-stack developer opportunities",
 };
@@ -334,16 +334,16 @@ ${right.join("\n")}`);
 const PROJECTS = [
   {
     file: "cueflow", name: "Cueflow", eyebrow: "INDEPENDENT PRODUCT · BETA", accent: C.mint,
-    tagline: "A macOS app made by a DJ, for DJs.",
+    tagline: "A macOS & Windows app made by a DJ, for DJs.",
     desc: "Started as a tool to improve my own DJ workflow, now tested in beta by around ten DJs, from beginners to experienced users.",
     bullets: [
-      "Native macOS application built with Swift",
+      "Desktop application for macOS and Windows",
       "Product designed around real DJ workflows",
       "Licence management and payment flows",
-      "Preparing the launch of a paid perpetual licence",
+      "Paid subscription with licence key activation",
     ],
-    tags: ["macOS", "Swift", "Stripe", "Product development"],
-    link: { label: "Visit Cueflow", href: "https://cueflow.colasnaudi.com" },
+    tags: ["macOS", "Windows", "Stripe", "Product development"],
+    link: { label: "Visit Cueflow", href: "https://cueflow.fr" },
   },
   {
     file: "besta", name: "Besta", eyebrow: "CO-FOUNDER · 15,000+ DOWNLOADS", accent: C.coral,

@@ -30,26 +30,26 @@
   <text x="68" y="55.5" class="eyebrow k">INDEPENDENT PRODUCT · BETA</text>
 </g>
 <text x="34" y="122" class="d k in2" font-size="44" letter-spacing="-1.6">Cueflow</text>
-<g class="in2"><text x="36" y="158.0" class="b k" font-weight="600" font-size="19">A macOS app made by a DJ, for DJs.</text></g>
+<g class="in2"><text x="36" y="158.0" class="b k" font-weight="600" font-size="19">A macOS &amp; Windows app made by a DJ, for DJs.</text></g>
 <g class="in3"><text x="36" y="186.0" class="b k2" font-weight="400" font-size="16">Started as a tool to improve my own DJ workflow, now tested in beta</text>
 <text x="36" y="210.0" class="b k2" font-weight="400" font-size="16">by around ten DJs, from beginners to experienced users.</text></g>
 <line x1="36" y1="232" x2="564" y2="232" class="ln in3"/>
 <g class="in3"><rect x="36" y="255" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="264.0" class="b k" font-weight="500" font-size="15.5">Native macOS application built with Swift</text>
+<text x="58" y="264.0" class="b k" font-weight="500" font-size="15.5">Desktop application for macOS and Windows</text>
 <rect x="36" y="287" width="8" height="8" rx="2.5" fill="#FF5A36"/>
 <text x="58" y="296.0" class="b k" font-weight="500" font-size="15.5">Product designed around real DJ workflows</text>
 <rect x="36" y="319" width="8" height="8" rx="2.5" fill="#FF5A36"/>
 <text x="58" y="328.0" class="b k" font-weight="500" font-size="15.5">Licence management and payment flows</text>
 <rect x="36" y="351" width="8" height="8" rx="2.5" fill="#FF5A36"/>
-<text x="58" y="360.0" class="b k" font-weight="500" font-size="15.5">Preparing the launch of a paid perpetual licence</text></g>
+<text x="58" y="360.0" class="b k" font-weight="500" font-size="15.5">Paid subscription with licence key activation</text></g>
 <g class="in4"><rect x="36.0" y="406" width="72.0" height="30" rx="10" class="sf"/>
 <text x="49.0" y="425.7" class="b k" font-weight="500" font-size="13.5">macOS</text>
-<rect x="116.0" y="406" width="58.0" height="30" rx="10" class="sf"/>
-<text x="129.0" y="425.7" class="b k" font-weight="500" font-size="13.5">Swift</text>
-<rect x="182.1" y="406" width="64.3" height="30" rx="10" class="sf"/>
-<text x="195.1" y="425.7" class="b k" font-weight="500" font-size="13.5">Stripe</text>
-<rect x="254.4" y="406" width="165.3" height="30" rx="10" class="sf"/>
-<text x="267.4" y="425.7" class="b k" font-weight="500" font-size="13.5">Product development</text></g>
+<rect x="116.0" y="406" width="84.7" height="30" rx="10" class="sf"/>
+<text x="129.0" y="425.7" class="b k" font-weight="500" font-size="13.5">Windows</text>
+<rect x="208.7" y="406" width="64.3" height="30" rx="10" class="sf"/>
+<text x="221.7" y="425.7" class="b k" font-weight="500" font-size="13.5">Stripe</text>
+<rect x="281.1" y="406" width="165.3" height="30" rx="10" class="sf"/>
+<text x="294.1" y="425.7" class="b k" font-weight="500" font-size="13.5">Product development</text></g>
 <g class="in4">
   <rect x="36" y="502" width="159.4" height="46" rx="15" fill="#FF5A36"/>
   <text x="58" y="530.5" class="b" font-weight="600" font-size="15" fill="#16181A">Visit Cueflow</text>
