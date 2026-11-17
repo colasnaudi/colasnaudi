@@ -8,6 +8,7 @@
   <a href="https://www.malt.fr/profile/colasnaudi"><img src="./assets/btn-malt.svg" height="54" alt="Find me on Malt" /></a>
   <a href="https://colasnaudi.com"><img src="./assets/btn-portfolio.svg" height="54" alt="Portfolio" /></a>
   <a href="https://www.linkedin.com/in/colasnaudi/"><img src="./assets/btn-linkedin.svg" height="54" alt="LinkedIn" /></a>
+  <a href="https://dribbble.com/colasnaudi"><img src="./assets/btn-dribbble.svg" height="54" alt="Dribbble" /></a>
   <a href="mailto:colasnaudi@gmail.com"><img src="./assets/btn-email.svg" height="54" alt="colasnaudi@gmail.com" /></a>
 </p>
 
