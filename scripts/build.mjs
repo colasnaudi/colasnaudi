@@ -241,12 +241,37 @@ const arrowRight = (x, y, color, s = 1) =>
 const arrowUpRight = (x, y, color) =>
   `<path d="M${x} ${y + 10}L${x + 10} ${y}M${x + 2.5} ${y}H${x + 10}V${y + 7.5}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
 
+// ---------- logos (brand paths from simple-icons, CC0) ----------
+// box = [x, y, size]: the square area of the path to show
+const LOGOS = {
+  linkedin: { box: [0, 0, 24], d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" },
+  dribbble: { box: [0, 0, 24], d: "M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.020 4.395-6.870zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.170 11.775 2.206 11.710 1.756 11.700l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.010 3.990-5.676 7.170zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.190-3.440 5.373-3.702-1.810-1.610-4.190-2.586-6.795-2.586-.825 0-1.630.1-2.400.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.040.24.49.47.985.68 1.486.08.18.15.36.22.53 3.410-.43 6.800.26 7.140.33-.02-2.420-.88-4.640-2.310-6.380z" },
+  // the Malt flower only (the wordmark is dropped)
+  malt: { box: [-0.15, 9.35, 6.3], d: "M3.499 13.563l-.21.21.619.618c.304.304.79.598 1.244.144.339-.34.26-.695.073-.98-.06.004-1.726.008-1.726.008zm-.963-2.325.21-.21-.608-.607c-.304-.303-.765-.621-1.243-.143-.351.35-.273.692-.087.97Zm2.86.416c-.037.043-1.511 1.524-1.511 1.524h1.154c.43 0 .981-.101.981-.777 0-.496-.296-.683-.624-.747zm-3.244-.031H.981c-.43 0-.981.135-.981.778 0 .479.307.676.641.745.04-.046 1.511-1.523 1.511-1.523zm1.484 3.04-.618-.618-.608.607a2.613 2.613 0 0 1-.137.128c.07.333.266.639.745.639s.676-.307.745-.641c-.043-.037-.085-.073-.127-.115zM2.41 10.15l.608.607.618-.618a2.25 2.25 0 0 1 .128-.118c-.065-.327-.251-.623-.747-.623s-.682.297-.746.625c.046.04.092.08.14.127zm2.742.117c-.455-.454-.94-.16-1.244.144l-2.87 2.87c-.303.303-.621.765-.143 1.243.478.478.94.16 1.243-.143l2.87-2.87c.304-.304.598-.79.144-1.244Z" },
+};
+// line icons, drawn on a 24-unit grid
+const LINE_ICONS = {
+  globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+};
+function logo(name, x, y, size) {
+  if (LINE_ICONS[name]) {
+    const s = size / 24;
+    return `<g transform="translate(${x} ${y}) scale(${+s.toFixed(4)})" class="bs" stroke-width="${(1.8 / s).toFixed(2)}" stroke-linecap="round" stroke-linejoin="round" fill="none">${LINE_ICONS[name]}</g>`;
+  }
+  const { box: [bx, by, bs], d } = LOGOS[name];
+  return `<path transform="translate(${x} ${y}) scale(${+(size / bs).toFixed(4)}) translate(${-bx} ${-by})" class="bf" d="${d}"/>`;
+}
+
 // ---------- buttons ----------
 // variant "coral": always coral. variant "ink": ink in light mode, light in dark mode.
-function button(label, { variant = "ink", icon = "external" } = {}) {
-  const H = 40, padX = 18, size = 14.5, gap = 9, iconW = icon === "external" ? 10 : 12;
+// brand: logo drawn before the label (see LOGOS / LINE_ICONS)
+function button(label, { variant = "ink", icon = "external", brand } = {}) {
+  const H = 40, padX = 16, size = 14.5, gap = 9, iconW = icon === "external" ? 10 : 12;
+  const LS = 17, lgap = 9; // logo size, gap between logo and label
+  const tx = padX + (brand ? LS + lgap : 0);
   const tw = measure(label, 600, size);
-  const W = Math.ceil(padX + tw + gap + iconW + padX);
+  const W = Math.ceil(tx + tw + gap + iconW + padX);
   const coral = variant === "coral";
   const css = FONTS.body600() + BASE_CSS + `
   .bb{fill:${coral ? C.coral : C.ink}} .bf{fill:${coral ? C.ink : C.white}} .bs{stroke:${coral ? C.ink : C.white}}
@@ -254,7 +279,7 @@ function button(label, { variant = "ink", icon = "external" } = {}) {
   .ic{animation:nudge 1.8s ease-in-out infinite}
   @keyframes nudge{0%,100%{transform:none}50%{transform:translate(${icon === "external" ? "2px,-2px" : "3px,0"})}}
   `;
-  const ix = padX + tw + gap;
+  const ix = tx + tw + gap;
   const iconSvg = icon === "external"
     ? arrowUpRight(ix, H / 2 - 5, "").replace('stroke=""', 'class="bs"')
     : arrowRight(ix, H / 2, "").replace('stroke=""', 'class="bs"');
@@ -264,7 +289,8 @@ function button(label, { variant = "ink", icon = "external" } = {}) {
   return svg(W, H + TOP, css, `
 <g transform="translate(0 ${TOP})">
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="12.5" class="bb"/>
-<text x="${padX}" y="${H / 2 + 5}" class="b bf" font-weight="600" font-size="${size}">${esc(label)}</text>
+${brand ? logo(brand, padX, (H - LS) / 2, LS) : ""}
+<text x="${tx}" y="${H / 2 + 5}" class="b bf" font-weight="600" font-size="${size}">${esc(label)}</text>
 <g class="ic">${iconSvg}</g>
 </g>`);
 }
@@ -704,11 +730,11 @@ if (process.argv.includes("--stats")) {
   write("about.svg", about());
   for (const [name, content] of projects()) write(name, content);
   write("stack.svg", await stack());
-  write("btn-malt.svg", button("Find me on Malt", { variant: "coral" }));
-  write("btn-portfolio.svg", button("Portfolio"));
-  write("btn-linkedin.svg", button("LinkedIn"));
-  write("btn-dribbble.svg", button("Dribbble"));
-  write("btn-email.svg", button("colasnaudi@gmail.com", { icon: "arrow" }));
+  write("btn-malt.svg", button("Find me on Malt", { variant: "coral", brand: "malt" }));
+  write("btn-portfolio.svg", button("Portfolio", { brand: "globe" }));
+  write("btn-linkedin.svg", button("LinkedIn", { brand: "linkedin" }));
+  write("btn-dribbble.svg", button("Dribbble", { brand: "dribbble" }));
+  write("btn-email.svg", button("colasnaudi@gmail.com", { icon: "arrow", brand: "mail" }));
   // never overwrite the real card generated by the workflow
   if (!existsSync(join(OUT, "stats.svg"))) write("stats.svg", statsPlaceholder());
 }
