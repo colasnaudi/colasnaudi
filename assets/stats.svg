@@ -23,17 +23,17 @@
 
 <rect x=".5" y=".5" width="1199" height="479" rx="32" class="bg ln"/>
 <text x="48" y="50" class="eyebrow k3">GITHUB · @COLASNAUDI</text>
-<text x="1152" y="50" text-anchor="end" class="b km" font-size="13">updated 22 Nov 2026</text>
+<text x="1152" y="50" text-anchor="end" class="b km" font-size="13">updated 23 Nov 2026</text>
 <g class="in1">
   <rect x="48" y="72" width="264" height="120" rx="20" fill="#FF5A36"/>
   <text x="70" y="104" class="eyebrow" fill="#16181A">CONTRIBUTIONS</text>
-  <text x="68" y="158" class="d" font-size="46" letter-spacing="-1.6" fill="#16181A">1,676</text>
+  <text x="68" y="158" class="d" font-size="46" letter-spacing="-1.6" fill="#16181A">1,669</text>
   <text x="70" y="180" class="b" font-weight="500" font-size="13" fill="#16181A">last 12 months</text>
 </g>
 <g class="in2">
   <rect x="328" y="72" width="264" height="120" rx="20" class="sf"/>
   <text x="350" y="104" class="eyebrow k" fill="#16181A">COMMITS</text>
-  <text x="348" y="158" class="d k" font-size="46" letter-spacing="-1.6" fill="#16181A">1,666</text>
+  <text x="348" y="158" class="d k" font-size="46" letter-spacing="-1.6" fill="#16181A">1,659</text>
   <text x="350" y="180" class="b k3" font-weight="500" font-size="13" fill="#16181A">last 12 months</text>
 </g>
 <g class="in3">
